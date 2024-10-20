@@ -49,17 +49,22 @@
             <li>
               <a class="dropdown-link">ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ <i id="kinitikotitaFititon" class="fas fa-caret-down"></i></a>
               <ul class="dropdown" style="display: none;">
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ</a></li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ</a></li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΠΡΟΓΡΑΜΜΑΤΑ ΕΠΙΜΟΡΦΩΣΗΣ</a></li>
+                <li class="dropdown-item">
+                  <a href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                </li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΠΛΑΙΣΙΟ</a></li>
               </ul>
             </li>
             <li>
               <a class="dropdown-link">ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
               <ul class="dropdown" style="display: none;">
-                <li class="dropdown-item"><a href="#">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ</a></li>
-                <li class="dropdown-item"><a href="#">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ</a></li>
-                <li class="dropdown-item"><a href="#">ΠΡΟΓΡΑΜΜΑΤΑ ΕΠΙΜΟΡΦΩΣΗΣ</a></li>
+                <li class="dropdown-item">
+                  <a class="dropdown-link" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
+                  
+                </li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΠΡΟΓΡΑΜΜΑΤΑ ΕΠΙΜΟΡΦΩΣΗΣ</a></li>
               </ul>
             </li>
             <li><a href="#">ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ</a></li>
@@ -90,7 +95,7 @@
           </div>
           <div class="swiper-slide">
             <div class="content">
-                <div class="title" data-swiper-parallax="-300">hello !!</div>
+                <div class="title" data-swiper-parallax="-300">Τίτλος</div>
                 <div class="subtitle" data-swiper-parallax="-200">Περισσότερα</div>
             </div>
             
@@ -102,7 +107,7 @@
           </div>
           <div class="swiper-slide">
             <div class="content">
-                <div class="title" data-swiper-parallax="-300">something new here !!</div>
+                <div class="title" data-swiper-parallax="-300">Τίτλος</div>
                 <div class="subtitle" data-swiper-parallax="-200">Περισσότερα</div>
             </div>
             
@@ -167,28 +172,28 @@
                 </div>
             </div>
             <div class="card-news">
-                <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpg" alt="Card Image"> 
+                <img src="images/as-map-says-we-should-go-this-way.jpg" alt="Card Image"> 
                 <div class="card-content">
                     <h3 class="card-title">Τίτλος 2</h3>
                     <p class="card-description">Περιγραφή...</p>
                 </div>
             </div>
             <div class="card-news">
-                <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpg" alt="Card Image"> 
+                <img src="images/flight-booking-reservation-travel-destination-concept.jpg" alt="Card Image"> 
                 <div class="card-content">
                     <h3 class="card-title">Τίτλος 3</h3>
                     <p class="card-description">Περιγραφή...</p>
                 </div>
             </div>
             <div class="card-news">
-              <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpg" alt="Card Image"> 
+              <img src="images/2687659.jpg" alt="Card Image"> 
               <div class="card-content">
                   <h3 class="card-title">Τίτλος 4</h3>
                   <p class="card-description">Περιγραφή...</p>
               </div>
           </div>
           <div class="card-news">
-            <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpg" alt="Card Image"> 
+            <img src="images/man-reading-newspaper.jpg" alt="Card Image"> 
             <div class="card-content">
                 <h3 class="card-title">Τίτλος 5</h3>
                 <p class="card-description">Περιγραφή...</p>
@@ -412,13 +417,13 @@
 
             const updateCounter = () => {
                 if (currentNumber < targetNumber2) {
-                    currentNumber++;
+                    currentNumber+=2;
                     numberElement.textContent = currentNumber;
-                    currentNumber2++;
+                    currentNumber2+=2;
                     numberElement2.textContent = currentNumber2;
-                    currentNumber3++;
+                    currentNumber3+=2;
                     numberElement3.textContent = currentNumber3;
-                    currentNumber4++;
+                    currentNumber4+=2;
                     numberElement4.textContent = currentNumber4;
                     setTimeout(updateCounter, incrementTime);
                 } else {

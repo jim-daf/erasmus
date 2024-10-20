@@ -1,19 +1,16 @@
+
 @font-face {
-    font-family: 'Calibri';
-    src: url(Fonts/Calibri/Calibri.ttf);
+    font-family: 'CalibriBold';
+    src: url(Fonts/font_Calibri/Calibri-Bold.ttf);
 }
 @font-face {
-    font-family: 'Calibril';
-    src: url(Fonts/Calibri/calibril.ttf);
-}
-@font-face {
-    font-family: 'Calibrib';
-    src: url(Fonts/Calibri/calibrib.ttf);
+    font-family: 'CalibriNorm';
+    src: url(Fonts/font_Calibri/Calibri.ttf);
 }
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Calibri'
+    font-family: 'CalibriNorm'
 }
 
 body{
@@ -55,6 +52,7 @@ body{
     float: inline-start;
     
     
+    
 }
 .nav-bar ul{
     display: inline-flex;
@@ -78,6 +76,7 @@ body{
     color: #fff;
     padding: 10px 10px;
     transition: 0.4s ease;
+    font-family: 'CalibriBold';
     
 }
 
@@ -273,6 +272,7 @@ img {
         width: 8px;
         background-color:#aaaaaae7;
     }
+    
 
  ::-webkit-scrollbar-thumb {
         border-radius: 7px;
@@ -352,6 +352,7 @@ img {
     font-size: 1.2em;
     margin: 0 0 10px;
     color: #000;
+    font-family: 'CalibriBold';
 }
 
 .card-description {
@@ -374,6 +375,9 @@ section {
 
 section p{
     text-align: left;
+}
+section h2{
+    font-family: 'CalibriBold';
 }
 
 
@@ -925,7 +929,109 @@ section p{
   
   }
 
+  @media all and (max-width: 600px) {
+    /* slideshow */
+    .title{
+        font-size: 30px;
+    }
+    .subtitle{
+        font-size: 18px;
+    }
+    /* cards */
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* one columns */
+        grid-template-rows: repeat(3,auto);
+        gap: 0;
+    }
+    .card{
+        margin-bottom: 20px;
+        
+    }
+    .card-description{
+        font-size: 14px;
+    }
+    .card-title{
+        font-size: 16px;
+    }
+    /* progress */
+    .progressbar-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* One columns */
+        gap: 0;
+        
+    }
+
+    .stats-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Two columns */
+        gap: 0;
+    }
+    .box{
+        width: 250px;
+        height: 250px;
+        justify-self: center;
+        margin-bottom: 12px;
+    }
+    .counter span{
+        font-size: 43px;
+    }
+    .text{
+        font-size: 16px;
+    }
+
+    .box .percent .num h2{
+        font-size: 32px
+    }
+    .box .percent .num h2 span{
+        font-size: 29px
+    }
+
+
+    
+
+    
+
+    #title-header{
+        display: none;
+    }
+    
+    .nav-bar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        opacity: 1; /* Start with opacity 0 */
+        transform: translateY(-10px); /* Start slightly moved up */
+        transition: all 0.5s; /* Transition for opacity and transform */
+        
+    }
+    .nav-bar li {
+        flex: 1;
+        
+    }
+    .nav-bar a {
+        display: block;
+        padding: 14px 20px;
+        
+        text-align: center;
+        text-decoration: none;
+    }
+    .dropdown{
+        display: none;
+    }
+    .dropdown-item{
+        display: none;
+    }
+    /* footer */
+  footer .menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+  }
   
+  }
 
   
 

@@ -690,12 +690,12 @@ section h2{
 
   /* For laptops */
   @media all and (max-width: 1500px) {
-    .container{
+    /*.container{
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto); 
         
-    }
+    }*/
    
     .stats-container{
         display: grid;

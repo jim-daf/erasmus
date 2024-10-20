@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url(Fonts/Calibri/Calibri.ttf);
+}
+@font-face {
+    font-family: 'Calibril';
+    src: url(Fonts/Calibri/calibril.ttf);
+}
+@font-face {
+    font-family: 'Calibrib';
+    src: url(Fonts/Calibri/calibrib.ttf);
+}
 *{
     margin: 0;
     padding: 0;
-    font-family: Calibri; 
+    font-family: 'Calibri'
 }
 
 body{
@@ -259,12 +271,12 @@ img {
     }
     ::-webkit-scrollbar {
         width: 8px;
-        background-color:#aaa;
+        background-color:#aaaaaae7;
     }
 
  ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: #10151a;
+        border-radius: 7px;
+        background-color: #0c0d0e7c;
         -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
     }
     .container-news {

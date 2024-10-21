@@ -45,8 +45,9 @@ body{
     background:#242834;
     background:#16181f;
     /*background:#1d253c;*/
-    text-align: center;
+    text-align: center; 
     box-shadow: 10px 14px 18px rgba(0, 0, 0, 0.1);
+    
     
 }
 .nav-text {
@@ -100,6 +101,8 @@ body{
     list-style: none;
     color: #000000;
     
+    
+    
 }
 
 .nav-bar2 ul li{
@@ -107,6 +110,7 @@ body{
     margin: 5px;
     padding: 12px 12px 12px 12px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0.1, 0.4);
+    
     
 }
 

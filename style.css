@@ -288,10 +288,8 @@ img {
 
   /* Card container */ 
 
-  #news-section{
-    overflow-x: auto;
-    
-  }
+  
+  
 
   .container {
     display: flex;
@@ -316,10 +314,16 @@ img {
     
 
  ::-webkit-scrollbar-thumb {
+        width: 8px;
         border-radius: 7px;
         background-color: #0c0d0e7c;
         -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
     }
+    #news-section{
+        overflow-x: auto;
+        
+        
+      }
     .container-news {
         display: flex;
         
@@ -343,13 +347,13 @@ img {
             background: #bbb5b5;
             background: #2b22213a;
             border-radius: 8px;
-            width: 300px; /* 80% of the parent container */
+            width: 300px; 
             justify-content: center;
             align-items: center;
             box-shadow: 10px 10px 10px rgba(0, 0, 0.1, 0.4); /* Default elevation */
             overflow: hidden;
             transition: transform 0.2s;
-            min-width: 250px; /* Prevents shrinking below this width */
+            min-width: none; /* Prevents shrinking below this width */
             
             
         }
@@ -1080,6 +1084,14 @@ section h2{
     margin: 0 auto;
     justify-content: center;
   }
+  /*section h2{
+    font-size: 17px;
+  }*/
+  .card-news{
+    
+    width: 200px;
+  }
+  
   
   }
 

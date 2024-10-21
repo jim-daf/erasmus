@@ -17,7 +17,60 @@
             background: #00000053;
             background: #00000032;
         }
-        
+        .mySwiper2{
+          background: #fff;
+          margin-top: 20px;
+          
+          
+        }
+        .swiper-slide-news{
+          background: transparent;
+          font-size: 13px;
+          padding: 0;
+          padding-bottom: 30px;
+          
+          justify-content: center;
+          justify-items: center;
+          align-items: center;
+
+
+
+        }
+        .card-news {
+  display: flex;
+  flex-direction: column;
+  
+  
+  overflow: hidden; /* Prevents content overflow */
+  max-width: 100%; /* Ensures responsiveness */
+}
+
+.card-news img {
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex-grow: 1; /* Allows content area to grow */
+}
+
+.news-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.news-description {
+  flex-grow: 1; /* Allows description to take available space */
+  margin-top: 8px;
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+  display: -webkit-box; /* Needed for ellipsis */
+  -webkit-box-orient: vertical; /* Needed for ellipsis */
+  -webkit-line-clamp: 3; /* Limits to 3 lines */
+}
        
        .dropdown-item{
           display: none;
@@ -186,45 +239,106 @@
 
     <section id="news-section" >
         <h2>Νέα</h2>
-        
-        <div class="container-news" id="containerNews">
-          
-            <div class="card-news">
+        <!-- Swiper -->
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper" >
+            <div class="swiper-slide swiper-slide-news">
+              <div class="card-news" >
                 <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpeg" alt="Card Image"> 
-                <div class="card-content">
-                    <h3 class="card-title">Erasmus+ Webinar</h3>
-                    <p class="card-description">Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ</p>
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Erasmus+ Webinar</h3>
+                    <p class="card-description news-description">Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ</p>
                 </div>
             </div>
-            <div class="card-news">
+            </div>
+            <div class="swiper-slide swiper-slide-news">
+              <div class="card-news">
                 <img src="images/as-map-says-we-should-go-this-way.jpeg" alt="Card Image"> 
-                <div class="card-content">
-                    <h3 class="card-title">Τίτλος 2</h3>
-                    <p class="card-description">Περιγραφή...</p>
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 2</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
                 </div>
             </div>
-            <div class="card-news">
+            </div>
+            <div class="swiper-slide swiper-slide-news">
+              <div class="card-news">
                 <img src="images/flight-booking-reservation-travel-destination-concept.jpeg" alt="Card Image"> 
-                <div class="card-content">
-                    <h3 class="card-title">Τίτλος 3</h3>
-                    <p class="card-description">Περιγραφή...</p>
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 3</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
                 </div>
             </div>
-            <div class="card-news">
-              <img src="images/2687659.jpg" alt="Card Image"> 
-              <div class="card-content">
-                  <h3 class="card-title">Τίτλος 4</h3>
-                  <p class="card-description">Περιγραφή...</p>
+            </div>
+            <div class="swiper-slide swiper-slide-news">
+              <div class="card-news">
+                <img src="images/2687659.jpg" alt="Card Image"> 
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 4</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide-news">
+              <div class="card-news">
+              <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+              <div class="card-content news-content">
+                  <h3 class="card-title news-title">Τίτλος 5</h3>
+                  <p class="card-description news-description">Περιγραφή...</p>
               </div>
           </div>
-          <div class="card-news">
-            <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
-            <div class="card-content">
-                <h3 class="card-title">Τίτλος 5</h3>
-                <p class="card-description">Περιγραφή...</p>
+        </div>
+            
+              <div class="swiper-slide swiper-slide-news">
+                <div class="card-news">
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 6</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
+                </div>
             </div>
+            </div>
+            
+              <div class="swiper-slide swiper-slide-news">
+                <div class="card-news">
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 7</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
+                </div>
+            </div>
+          </div>
+            
+            
+              <div class="swiper-slide swiper-slide-news">
+                <div class="card-news">
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 8</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
+                </div>
+            </div>
+            </div>
+            
+              <div class="swiper-slide swiper-slide-news">
+                <div class="card-news">
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <div class="card-content news-content">
+                    <h3 class="card-title news-title">Τίτλος 9</h3>
+                    <p class="card-description news-description">Περιγραφή...</p>
+                </div>
+            </div>
+          
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination new-pagination"></div>
         </div>
-        </div>
+        
+          
+          
+
+        
         
     </section>
 
@@ -588,7 +702,101 @@
         });*/
 
       </script>
-      
+     
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+      breakpoints: {
+    // When screen width is <= 1500px
+    1700: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+      }
+    },
+    1500: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      }
+    },
+    1200: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      }
+    },
+    1000: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      }
+    },
+    // When screen width is <= 1300px
+    700: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    
+    600: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    500: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    400: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    300: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    200: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+    100: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+      }
+    },
+  },
+    });
+    // Optional: Update Swiper on window resize
+window.addEventListener('resize', function () {
+  swiper.update();
+});
+  </script>
       
 </body>
 

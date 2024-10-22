@@ -851,7 +851,8 @@ section h2{
     
     .nav-bar li {
         flex: 1;
-        width: 50%;
+        width: max-content;
+        flex-grow: 1;
         
     }
     .dropdown li{
@@ -879,7 +880,7 @@ section h2{
         flex-grow: 1;
         
         
-        
+        width: 100%;
         margin-top: 20px auto;
         box-shadow: 5px 5px 5px 5px;
         
@@ -896,8 +897,11 @@ section h2{
         text-align: center;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        
     }
     .inner-dropdown-item{
+        
         align-items: center;
         justify-content: center;
         text-decoration: underline;
@@ -905,6 +909,7 @@ section h2{
         text-decoration-thickness: 1.5px;
     }
     .inner-dropdown-link{
+        
         text-align: center;
         text-decoration: underline;
     }

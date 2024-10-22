@@ -69,7 +69,7 @@
   text-overflow: ellipsis; /* Adds ellipsis for overflow text */
   display: -webkit-box; /* Needed for ellipsis */
   -webkit-box-orient: vertical; /* Needed for ellipsis */
-  -webkit-line-clamp: 3; /* Limits to 3 lines */
+  line-clamp: 3; /* Limits to 3 lines */
 }
        
        .dropdown-item{
@@ -139,8 +139,14 @@
               <a class="dropdown-link">ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
               <ul class="dropdown" style="display: none;">
                 <li class="dropdown-item">
-                  <a class="dropdown-link" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
-                  
+                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
+                  <ul class="dropdown inner-dropdown" style="display: none;">
+                    <li class="dropdown-item inner-dropdown-item">
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                    </li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΛΑΙΣΙΟ</a></li>
+                  </ul>
                 </li>
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ</a></li>
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΠΡΟΓΡΑΜΜΑΤΑ ΕΠΙΜΟΡΦΩΣΗΣ</a></li>
@@ -634,8 +640,9 @@
         // For dropdown navbar items
         const navBar = document.querySelectorAll('.nav-bar');
         const dropdownItemLines = document.querySelectorAll('.dropdown');
+        const innerDropdownItemLines = document.querySelectorAll('.inner-dropdown');
         const dropdownLinksAll = document.querySelectorAll('.dropdown-link');
-        
+        const innerDropdownLinksAll = document.querySelectorAll('.inner-dropdown-link');
 
         dropdownLinksAll.forEach(item =>{
           item.addEventListener('click',(event) => {
@@ -643,14 +650,27 @@
               var parent_li = item.parentElement;
               var dropdown_ul = parent_li.querySelector('.dropdown')
               var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
+              var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
               var icon = item.querySelector('i')
               dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
               
               if(dropdown_ul.style.display == 'block'){
                 icon.classList.remove('fas', 'fa-caret-down');
-                icon.classList.add('fas', 'fa-caret-up');
+                if(item.classList.contains('inner-dropdown-link')){
+                  icon.classList.add('fas', 'fa-caret-up');
+                  
+                }else{
+                  icon.classList.add('fas', 'fa-caret-up');
+                }
+                
+                
               }else{
-                icon.classList.remove('fas', 'fa-caret-up');
+                if(item.classList.contains('inner-dropdown-link')){
+                  icon.classList.remove('fas', 'fa-caret-up');
+                }else{
+                  icon.classList.remove('fas', 'fa-caret-up');
+                }
+                
                 icon.classList.add('fas', 'fa-caret-down');
               }
               dropdownItemList.forEach((i,index) => {
@@ -662,9 +682,16 @@
                     i.style.marginBottom = "5px"
                   }*/
               })
+              innerDropdownItemList.forEach((i,index) =>{
+                i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
+                i.style.margin = '0 auto'
+                
+                i.style.overflow = "auto"
+              })
               //event.stopPropagation(); // Prevent click event from bubbling up
             })
         })
+
         
         /*navBar.forEach(item => {
             var dropdown = item.querySelector('.dropdown')

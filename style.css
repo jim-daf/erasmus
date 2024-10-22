@@ -167,20 +167,20 @@ body{
     box-shadow: 2px 2px 2px 2px;
     border: 0;
     border-radius: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
 }
 .inner-dropdown-item{
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline;
+    align-items: start;
+    justify-content: start;
+    /*text-decoration: underline;*/
     text-decoration-color: white;
     text-decoration-thickness: 1.5px;
 }
 .inner-dropdown-link{
-    text-align: center;
-    text-decoration: underline;
+    text-align: start;
+    /*text-decoration: underline;*/
 }
 
 .inner-dropdown-item:hover{
@@ -903,14 +903,14 @@ section h2{
     .inner-dropdown-item{
         align-items: center;
         justify-content: center;
-        text-decoration: underline;
+        /*text-decoration: underline;*/
         text-decoration-color: white;
         text-decoration-thickness: 1.5px;
     }
     .inner-dropdown-link{
         
         text-align: center;
-        text-decoration: underline;
+        /*text-decoration: underline;*/
     }
     /* footer */
   footer .menu {

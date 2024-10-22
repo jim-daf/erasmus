@@ -34,7 +34,9 @@ body{
 .nav-bar{
     
     background:#242834;
+    background:#111a36;
     background:#16181f;
+    /*background:#16181f98;*/
     /*background:#1d253c;*/
     text-align: center;
     box-shadow: 10px 14px 18px rgba(0, 0, 0, 0.1);

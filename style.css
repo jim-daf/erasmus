@@ -36,6 +36,8 @@ body{
     background:#242834;
     background:#111a36;
     background:#16181f;
+    background:#141414;
+    
     /*background:#16181f98;*/
     /*background:#1d253c;*/
     text-align: center;
@@ -83,7 +85,7 @@ body{
 
 .nav-bar ul li a{
     display: block; /* Make anchor a block element */
-    font-weight: 600;
+    font-weight: normal;
     text-decoration: none;
     font-size: 17px;
     color: #fff;

@@ -55,6 +55,7 @@
   flex-direction: column;
   padding: 16px;
   flex-grow: 1; /* Allows content area to grow */
+  flex-wrap: wrap;
 }
 
 .news-title {
@@ -69,13 +70,14 @@
   text-overflow: ellipsis; /* Adds ellipsis for overflow text */
   display: -webkit-box; /* Needed for ellipsis */
   -webkit-box-orient: vertical; /* Needed for ellipsis */
-  line-clamp: 3; /* Limits to 3 lines */
+  -webkit-line-clamp: 3; /* Limits to 3 lines */
+  line-height: 16px; /* Adjust line-height for better spacing */
+  max-height: 48px; /* Ensure this matches line-height * 3 */
+  
+  
 }
+
        
-       .dropdown-item{
-          display: none;
-          
-       }
        a:hover{
         cursor: pointer;
        }
@@ -314,7 +316,10 @@
                 <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title">Erasmus+ Webinar</h3>
-                    <p class="card-description news-description">Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ</p>
+                    <p style="padding-bottom: 3px;" class="card-description news-description" >
+                      Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ
+                      
+                    </p>
                 </div>
             </div>
             </div>

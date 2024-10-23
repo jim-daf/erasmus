@@ -37,6 +37,7 @@ body{
     background:#111a36;
     background:#16181f;
     background:#141414;
+    background: #11121a;
     
     /*background:#16181f98;*/
     /*background:#1d253c;*/
@@ -167,6 +168,7 @@ body{
     justify-content: start;
     align-items: start;
     
+    
 }
 .inner-dropdown{
     background: #4e4e4e;
@@ -176,6 +178,7 @@ body{
     text-align: start;
     justify-content: start;
     align-items: start;
+    
 }
 .inner-dropdown-item{
     align-items: start;
@@ -183,14 +186,36 @@ body{
     /*text-decoration: underline;*/
     text-decoration-color: white;
     text-decoration-thickness: 1.5px;
+    
+    
 }
 .inner-dropdown-link{
     text-align: start;
+    flex-grow: 1;
     /*text-decoration: underline;*/
+    
 }
 
 .inner-dropdown-item:hover{
     text-decoration-color: #000;
+    width: 100%;
+}
+.dropdown{
+    position: absolute;
+    z-index: 1000;
+    
+  }
+.dropdown-item{
+    display: none;
+    background: #dbd7d7;
+
+    }
+.nav-bar ul li ul li a{
+color: #000;
+}
+        
+.nav-bar .inner-dropdown a{
+color: #000;
 }
 
 /* slideshow */
@@ -393,6 +418,9 @@ img {
             transform: scale(1.05);
             cursor: pointer;
         }
+        .card-description{
+            font-size: 13px;
+        }
 .card {
     /*background: #bdbcbc;*/
     background: #c3c2c2;
@@ -433,7 +461,7 @@ img {
 }
 
 .card-description {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #000;
     text-align: left;
 }
@@ -818,7 +846,9 @@ section h2{
         
     }
     .nav-bar{
+        
         transition: height 0.5s ease;
+        
     }
     .nav-bar.active ul {
         display: flex;
@@ -861,6 +891,9 @@ section h2{
         flex-grow: 1;
         
     }
+    .dropdown{
+        position: relative;
+      }
     .dropdown li{
         width: 100%;
         
@@ -873,6 +906,7 @@ section h2{
     }
     
     .dropdown{
+        position: relative;
         display: none; 
         border: 0;
         border-radius: 5px;
@@ -895,6 +929,19 @@ section h2{
         display: none;
         
     }
+    
+      .dropdown-item{
+                display: none;
+                background: #333;
+                
+             }
+             .nav-bar ul li ul li a{
+              color: white
+             }
+             
+             .nav-bar .inner-dropdown a{
+              color: #fff;
+             }
     .inner-dropdown{
         background: #4e4e4e;
         box-shadow: 2px 2px 2px 2px;

@@ -33,10 +33,10 @@ body{
 /* Navigation bar */
 .nav-bar{
     
-    background:#242834;
-    background:#111a36;
-    background:#16181f;
-    background:#141414;
+    /*background:#242834;*/
+    /*background:#111a36;*/
+    /* background:#16181f;*/
+    /*background:#141414;*/
     background: #11121a;
     
     /*background:#16181f98;*/
@@ -708,7 +708,17 @@ section h2{
       background-positon-x: 0px;
     }
   }
-  
+  .nav-bar3{
+    display: flex;
+    
+    width: 100%;
+    justify-content: end;
+}
+  .flags_container{
+    display: flex; gap: 5px; position: relative; justify-content: center; align-items: center; justify-items: center; text-align: center;
+    
+}
+
 
 
   /* Responsiveness */
@@ -751,6 +761,12 @@ section h2{
     
   
   }
+  @media all and (max-width: 1600px){
+    .flags_container{
+        display: none;
+    }
+    
+  }
 
   /* For laptops */
   @media all and (max-width: 1500px) {
@@ -760,7 +776,7 @@ section h2{
         grid-template-rows: repeat(2, auto); 
         
     }*/
-   
+    
     .stats-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr); 

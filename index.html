@@ -96,8 +96,38 @@
   margin: 0 auto;
 }
   */     
+       .flag-container{
+        
+        
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: flex-end;
+        justify-items: flex-end;
+        align-items: center;
+        align-content: center;
+        padding-right: 10px;
        
-       
+        
+        
+       }
+       .flag-container img:hover{
+        cursor: pointer;
+       }
+       .nav-bar2 ul{
+        /*
+        width: 100%;
+        justify-items: center;
+        justify-content: space-between;
+        */
+       }
+
+       .nav-bar ul li img:hover{
+        cursor: pointer;
+       }
+       .text-lang:hover{
+        cursor: pointer;
+       }
         
         
         
@@ -106,13 +136,36 @@
 </head>
 
 <body>
-    
+  <div class="nav-bar2 nav-bar3" style="background-color: #fff;">
+    <ul>
+      
+      
+      <div class="flag-container" style="padding-top: 10px;">
+        <div class="flags_container">
+          <img onclick="changeLanguage('en')" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
+          <span class="text-lang" onclick="changeLanguage('en')">English</span>
+
+        </div>|
+          <div class="flags_container">
+
+            <span class="text-lang" onclick="changeLanguage('el')">Greek</span>
+            <img onclick="changeLanguage('el')" class="flag" src="images/greek flag.jpg"  alt="" style="width: 25px; height: 14px; padding: 0; ">
+
+          </div>
+        
+      </div>
+      
+
+    </ul>
+  </div>
   <div class="nav-bar2" style="background-color: #fff;">
       <ul>
         
         <li id="logo_dimokritus" style="box-shadow: none;" ><img  src="images/Democritus_University_of_Thrace_New_Logo.png"  alt="" style="width: 90px; "></li>
         <li id="logo_erasmus" style="box-shadow: none;"><img  src="images/erasmus_logo.png"  alt="" style="width: 250px;"></li>
         
+        
+
       </ul>
     </div>
    
@@ -126,100 +179,124 @@
       </div>
         <ul id="nav-list">
             
-            <li class="active" ><a href="#" style="color: #000;">ΑΡΧΙΚΗ</a></li>
+            <li class="active" ><a href="#" style="color: #000;" data-lang-en = "HOME" data-lang-el="ΑΡΧΙΚΗ">ΑΡΧΙΚΗ</a></li>
             <li>
-              <a class="dropdown-link">ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ <i id="kinitikotitaFititon" class="fas fa-caret-down"></i></a>
+              <a class="dropdown-link" >
+                <span style="font-family: 'CalibriBold';" data-lang-en = "STUDENT MOBILITY" data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ </span>
+                <i id="kinitikotitaFititon" class="fas fa-caret-down"></i></a>
               <ul class="dropdown" style="display: none;">
                 <li class="dropdown-item">
-                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">ΣΠΟΥΔΕΣ <i class="fas fa-caret-down"></i></a>
+                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "STUDIES" data-lang-el="ΣΠΟΥΔΕΣ">ΣΠΟΥΔΕΣ</span> 
+                    <i class="fas fa-caret-down"></i>
+                  </a>
                   <ul class="dropdown inner-dropdown" style="display: none;">
                     <li class="dropdown-item inner-dropdown-item">
-                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΛΑΙΣΙΟ</a>
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "FIELD" data-lang-el="ΠΛΑΙΣΙΟ">ΠΛΑΙΣΙΟ</a>
                     </li>
                     <li class="dropdown-item inner-dropdown-item">
-                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SELECTION PROCEDURE" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
                     </li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "BEFORE MOVEMENT" data-lang-el="ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACADEMIC PRIORITIES" data-lang-el="ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "AFTER MOVEMENT" data-lang-el="ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACCOMMODATION & CARE" data-lang-el="ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "DEPARTMENT AGREEMENTS" data-lang-el="ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ">ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "LANGUAGE SUPPORT" data-lang-el="ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-item">
-                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ <i class="fas fa-caret-down"></i></a>
+                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "INTERNSHIP" data-lang-el="ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ ">ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ </span> 
+                    <i class="fas fa-caret-down"></i>
+                  </a>
                   <ul class="dropdown inner-dropdown" style="display: none;">
                     <li class="dropdown-item inner-dropdown-item">
-                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "CHOOSE PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
                     </li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΥΠΑΘΕΙΣ ΟΜΑΔΕΣ ΦΟΙΤΗΤΩΝ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΥΡΕΣΗ ΘΕΣΗΣ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "BEFORE MOVEMENT" data-lang-el="ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACADEMIC PRIORITIES" data-lang-el="ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "AFTER MOVEMENT" data-lang-el="ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACCOMMODATION & CARE" data-lang-el="ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "DEPARTMENT AGREEMENTS" data-lang-el="ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ">ΕΥΠΑΘΕΙΣ ΟΜΑΔΕΣ ΦΟΙΤΗΤΩΝ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "LANGUAGE SUPPORT" data-lang-el="ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "FIND A POSITION" data-lang-el="ΕΥΡΕΣΗ ΘΕΣΗΣ">ΕΥΡΕΣΗ ΘΕΣΗΣ</a></li>
 
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <a class="dropdown-link">ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
+              <a class="dropdown-link">
+                  <span style="font-family: 'CalibriBold';" data-lang-en = "PERSONNEL MOBILITY " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ </span> 
+                  <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i>
+              </a>
               <ul class="dropdown" style="display: none;">
                 <li class="dropdown-item">
-                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i></a>
+                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "MOBILITY FOR TEACHING " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ </span> 
+                    <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i>
+                  </a>
                   <ul class="dropdown inner-dropdown" style="display: none;">
                     <li class="dropdown-item inner-dropdown-item">
-                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ</a>
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ">ΔΙΑΔΙΚΑΣΙΑ</a>
                     </li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL WITH SPECIAL NEEDS" data-lang-el="ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;"data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-item">
-                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ <i id="kinitikotitaEpim" class="fas fa-caret-down"></i></a>
+                  <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "MOBILITY FOR LEARNING " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ </span> 
+                    <i id="kinitikotitaEpim" class="fas fa-caret-down"></i>
+                  </a>
                   <ul class="dropdown inner-dropdown" style="display: none;">
                     <li class="dropdown-item inner-dropdown-item">
-                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΔΙΑΔΙΚΑΣΙΑ</a>
+                      <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ">ΔΙΑΔΙΚΑΣΙΑ</a>
                     </li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
-                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL WITH SPECIAL NEEDS" data-lang-el="ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
+                    <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
                   </ul>
                 </li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΕΠΙΜΟΡΦΩΣΗ ΠΡΟΣΩΠΙΚΟΥ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL TRAINING" data-lang-el="ΕΠΙΜΟΡΦΩΣΗ ΠΡΟΣΩΠΙΚΟΥ">ΕΠΙΜΟΡΦΩΣΗ ΠΡΟΣΩΠΙΚΟΥ</a></li>
                 
               </ul>
             </li>
             <li>
-              <a class="dropdown-link">ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ <i id="dieth" class="fas fa-caret-down"></i></a>
+              <a class="dropdown-link">
+                <span style="font-family: 'CalibriBold';" data-lang-en = "INTERNATIONAL MOBILITY " data-lang-el="ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ ">ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ </span> 
+                <i id="dieth" class="fas fa-caret-down"></i>
+              </a>
               <ul class="dropdown" style="display: none;">
                 <li class="dropdown-item">
-                  <a href="#" style="font-size: 15px;">ΠΛΑΙΣΙΟ</a>
+                  <a href="#" style="font-size: 15px;" data-lang-en = "FRAME" data-lang-el="ΠΛΑΙΣΙΟ">ΠΛΑΙΣΙΟ</a>
                 </li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΣΥΝΕΡΓΑΣΙΕΣ ΚΙΝΗΤΙΚΟΤΗΤΑΣ</a></li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "MOBILITY PARTNERSHIPS" data-lang-el="ΣΥΝΕΡΓΑΣΙΕΣ ΚΙΝΗΤΙΚΟΤΗΤΑΣ">ΣΥΝΕΡΓΑΣΙΕΣ ΚΙΝΗΤΙΚΟΤΗΤΑΣ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
               </ul>
             </li>
             <li>
-              <a class="dropdown-link">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ <i id="mikta" class="fas fa-caret-down"></i></a>
+              <a class="dropdown-link">
+                <span style="font-family: 'CalibriBold';" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
+                 <i id="mikta" class="fas fa-caret-down"></i>
+                </a>
               <ul class="dropdown" style="display: none;">
                 <li class="dropdown-item">
-                  <a href="#" style="font-size: 15px;">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
+                  <a href="#" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
                 </li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
-                <li class="dropdown-item"><a href="#" style="font-size: 15px;">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "BIPs INVOLVING DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
+                <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
               </ul>
             </li>
-            <li><a href="#" >ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a></li>
+            <li><a href="#" data-lang-en = "COMMUNICATE WITH US" data-lang-el="ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a></li>
             
+
         </ul>
         
     </div>
@@ -231,8 +308,8 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="content">
-                <div class="title" data-swiper-parallax="-300">Καινούριο site Erasmus+ !!</div>
-                <div class="subtitle" data-swiper-parallax="-200">Περισσότερα</div>
+                <div class="title" data-swiper-parallax="-300" data-lang-en = "New site Erasmus+ !!" data-lang-el="Καινούριο site Erasmus+ !!">Καινούριο site Erasmus+ !!</div>
+                <div class="subtitle" data-swiper-parallax="-200" data-lang-en = "More" data-lang-el="Περισσότερα">Περισσότερα</div>
             </div>
             
             <div class="text" data-swiper-parallax="-100">
@@ -245,8 +322,8 @@
           </div>
           <div class="swiper-slide">
             <div class="content">
-                <div class="title" data-swiper-parallax="-300">Τίτλος</div>
-                <div class="subtitle" data-swiper-parallax="-200">Περισσότερα</div>
+                <div class="title" data-swiper-parallax="-300" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος</div>
+                <div class="subtitle" data-swiper-parallax="-200" data-lang-en = "More" data-lang-el="Περισσότερα">Περισσότερα</div>
             </div>
             
             <div class="text" data-swiper-parallax="-100">
@@ -257,8 +334,8 @@
           </div>
           <div class="swiper-slide">
             <div class="content">
-                <div class="title" data-swiper-parallax="-300">Τίτλος</div>
-                <div class="subtitle" data-swiper-parallax="-200">Περισσότερα</div>
+                <div class="title" data-swiper-parallax="-300" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος</div>
+                <div class="subtitle" data-swiper-parallax="-200" data-lang-en = "More" data-lang-el="Περισσότερα">Περισσότερα</div>
             </div>
             
             <div class="text" data-swiper-parallax="-100">
@@ -277,8 +354,12 @@
         <div class="card">
             <!--<img src="https://via.placeholder.com/250" alt="Card Image"> -->
             <div class="card-content">
-                <h3 class="card-title">Τι είναι το Erasmus+ ?</h3>
-                <p class="card-description">Το Erasmus+ είναι το πρόγραμμα της ΕΕ για την υποστήριξη της εκπαίδευσης, της κατάρτισης, της νεολαίας και του αθλητισμού στην Ευρώπη.
+                <h3 class="card-title" data-lang-en = "What is Erasmus+ ?" data-lang-el="Τι είναι το Erasmus+ ?">Τι είναι το Erasmus+ ?</h3>
+                <p class="card-description" data-lang-en="Erasmus+ is the EU's program to support education, training, youth and sport in Europe.
+                This is almost twice the funding compared to the previous program (2014-2020).
+               It supports priorities and activities set out in the European Education Area, the Digital Education Action Plan and the European Skills Agenda." data-lang-el="Το Erasmus+ είναι το πρόγραμμα της ΕΕ για την υποστήριξη της εκπαίδευσης, της κατάρτισης, της νεολαίας και του αθλητισμού στην Ευρώπη.
+               Πρόκειται για σχεδόν διπλάσια χρηματοδότηση σε σύγκριση με το προηγούμενο πρόγραμμα (2014-2020).
+              Υποστηρίζει προτεραιότητες και δραστηριότητες που καθορίζονται στον Ευρωπαϊκό Χώρο Εκπαίδευσης, το Σχέδιο Δράσης για την Ψηφιακή Εκπαίδευση και το Ευρωπαϊκό Πρόγραμμα Δεξιοτήτων.">Το Erasmus+ είναι το πρόγραμμα της ΕΕ για την υποστήριξη της εκπαίδευσης, της κατάρτισης, της νεολαίας και του αθλητισμού στην Ευρώπη.
                    Πρόκειται για σχεδόν διπλάσια χρηματοδότηση σε σύγκριση με το προηγούμενο πρόγραμμα (2014-2020).
                   Υποστηρίζει προτεραιότητες και δραστηριότητες που καθορίζονται στον Ευρωπαϊκό Χώρο Εκπαίδευσης, το Σχέδιο Δράσης για την Ψηφιακή Εκπαίδευση και το Ευρωπαϊκό Πρόγραμμα Δεξιοτήτων.
                 </p>
@@ -287,8 +368,8 @@
         <div class="card">
             <!--<img src="https://via.placeholder.com/250" alt="Card Image"> -->
             <div class="card-content">
-                <h3 class="card-title">Χρησιμότητα του Erasmus+</h3>
-                <p class="card-description">Ο γενικός στόχος του Προγράμματος είναι να υποστηρίξει, μέσω της δια βίου μάθησης, την εκπαιδευτική, επαγγελματική και προσωπική ανάπτυξη των ανθρώπων στην εκπαίδευση, την κατάρτιση, τη νεολαία και τον αθλητισμό, στην Ευρώπη και πέραν αυτής, συμβάλλοντας έτσι στη βιώσιμη ανάπτυξη, τις ποιοτικές θέσεις εργασίας και την κοινωνική συνοχή. την προώθηση της καινοτομίας και την ενίσχυση της ευρωπαϊκής ταυτότητας. 
+                <h3 class="card-title" data-lang-en = "Usability of Erasmus+" data-lang-el="Χρησιμότητα του Erasmus+">Χρησιμότητα του Erasmus+</h3>
+                <p class="card-description" data-lang-en="The overall objective of the Program is to support, through lifelong learning, the educational, professional and personal development of people in education, training, youth and sport, in Europe and beyond, thus contributing to sustainable development, quality jobs and social cohesion. promoting innovation and strengthening European identity." data-lang-el="Ο γενικός στόχος του Προγράμματος είναι να υποστηρίξει, μέσω της δια βίου μάθησης, την εκπαιδευτική, επαγγελματική και προσωπική ανάπτυξη των ανθρώπων στην εκπαίδευση, την κατάρτιση, τη νεολαία και τον αθλητισμό, στην Ευρώπη και πέραν αυτής, συμβάλλοντας έτσι στη βιώσιμη ανάπτυξη, τις ποιοτικές θέσεις εργασίας και την κοινωνική συνοχή. την προώθηση της καινοτομίας και την ενίσχυση της ευρωπαϊκής ταυτότητας. ">Ο γενικός στόχος του Προγράμματος είναι να υποστηρίξει, μέσω της δια βίου μάθησης, την εκπαιδευτική, επαγγελματική και προσωπική ανάπτυξη των ανθρώπων στην εκπαίδευση, την κατάρτιση, τη νεολαία και τον αθλητισμό, στην Ευρώπη και πέραν αυτής, συμβάλλοντας έτσι στη βιώσιμη ανάπτυξη, τις ποιοτικές θέσεις εργασίας και την κοινωνική συνοχή. την προώθηση της καινοτομίας και την ενίσχυση της ευρωπαϊκής ταυτότητας. 
                 </p>
             </div>
         </div>
@@ -299,15 +380,19 @@
     </div>
 
     <section>
-        <h2>Σχετικά με εμάς</h2>
+        <h2 data-lang-en = "About Us" data-lang-el="Σχετικά με εμάς">Σχετικά με εμάς</h2>
         <br>
-        <p>Καλώς ήρθατε στην σελίδα του Erasmus+ του Δημοκριτείου Πανεπιστημίου Θράκης. Στην καινούργια μας σελίδα προστίθεται συνεχώς νέο υλικό.
+        <p data-lang-el="Καλώς ήρθατε στην σελίδα του Erasmus+ του Δημοκριτείου Πανεπιστημίου Θράκης. Στην καινούργια μας σελίδα προστίθεται συνεχώς νέο υλικό.
+
+        Θα χαρούμε να επικοινωνήσετε μαζί μας και να μας στείλετε τις ουσιαστικές παρατηρήσεις σας για την βελτίωση της σελίδας μας." data-lang-en="Welcome to the Erasmus+ page of Demokriteio University of Thrace. New material is constantly being added to our new page.
+
+        We will be happy if you contact us and send us your essential comments for the improvement of our page.">Καλώς ήρθατε στην σελίδα του Erasmus+ του Δημοκριτείου Πανεπιστημίου Θράκης. Στην καινούργια μας σελίδα προστίθεται συνεχώς νέο υλικό.
 
             Θα χαρούμε να επικοινωνήσετε μαζί μας και να μας στείλετε τις ουσιαστικές παρατηρήσεις σας για την βελτίωση της σελίδας μας.</p>
     </section>
 
     <section id="news-section" >
-        <h2>Νέα</h2>
+        <h2 data-lang-en = "News" data-lang-el="Νέα">Νέα</h2>
         <!-- Swiper -->
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper" >
@@ -316,7 +401,7 @@
                 <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title">Erasmus+ Webinar</h3>
-                    <p style="padding-bottom: 3px;" class="card-description news-description" >
+                    <p style="padding-bottom: 3px;" class="card-description news-description" data-lang-el="Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ" data-lang-en="Follow the latest developments of the Erasmus program of the DUTH" >
                       Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ
                       
                     </p>
@@ -327,8 +412,8 @@
               <div class="card-news">
                 <img src="images/as-map-says-we-should-go-this-way.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 2</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 2</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
             </div>
@@ -336,8 +421,8 @@
               <div class="card-news">
                 <img src="images/flight-booking-reservation-travel-destination-concept.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 3</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 3</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
             </div>
@@ -345,8 +430,8 @@
               <div class="card-news">
                 <img src="images/2687659.jpg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 4</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 4</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
             </div>
@@ -354,8 +439,8 @@
               <div class="card-news">
               <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
               <div class="card-content news-content">
-                  <h3 class="card-title news-title">Τίτλος 5</h3>
-                  <p class="card-description news-description">Περιγραφή...</p>
+                  <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 5</h3>
+                  <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
               </div>
           </div>
         </div>
@@ -364,8 +449,8 @@
                 <div class="card-news">
                 <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 6</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 6</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
             </div>
@@ -374,8 +459,8 @@
                 <div class="card-news">
                 <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 7</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 7</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
           </div>
@@ -385,8 +470,8 @@
                 <div class="card-news">
                 <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 8</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 8</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
             </div>
@@ -395,8 +480,8 @@
                 <div class="card-news">
                 <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
                 <div class="card-content news-content">
-                    <h3 class="card-title news-title">Τίτλος 9</h3>
-                    <p class="card-description news-description">Περιγραφή...</p>
+                    <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 9</h3>
+                    <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
                 </div>
             </div>
           
@@ -415,7 +500,7 @@
     </section>
 
     <section id="stats-section">
-        <h2>Αριθμοί</h2>
+        <h2 data-lang-en = "Stats" data-lang-el="Αριθμοί">Αριθμοί</h2>
         <div class="stats-container">
           <div >
             <div class="box">
@@ -428,7 +513,7 @@
                     
                   </div>
                 </div>
-                <h2 class="text" style="text-align: center;">Εισερχόμενοι Φοιτητές</h2>
+                <h2 class="text" style="text-align: center;" data-lang-en = "Incoming Students" data-lang-el="Εισερχόμενοι Φοιτητές">Εισερχόμενοι Φοιτητές</h2>
               </div>
           </div>
           <div>
@@ -442,7 +527,7 @@
                     
                   </div>
                 </div>
-                <h2 class="text" style="text-align: center;">Εισερχόμενα Μέλη ΔΕΠ</h2>
+                <h2 class="text" style="text-align: center;" data-lang-en = "Duth Members" data-lang-el="Εισερχόμενα Μέλη ΔΕΠ">Εισερχόμενα Μέλη ΔΕΠ</h2>
               </div>
         </div>
             <div>
@@ -456,7 +541,7 @@
                         
                       </div>
                     </div>
-                    <h2 class="text" style="text-align: center;">Εξερχόμενοι Φοιτητές</h2>
+                    <h2 class="text" style="text-align: center;" data-lang-en = "Foreign Students" data-lang-el="Εξερχόμενοι Φοιτητές">Εξερχόμενοι Φοιτητές</h2>
                   </div>
             </div>
             
@@ -471,7 +556,7 @@
                     
                   </div>
                 </div>
-                <h2 class="text" style="text-align: center;">Εξερχόμενα Μέλη ΔΕΠ</h2>
+                <h2 class="text" style="text-align: center;" data-lang-en = "Foreign Duth Members" data-lang-el="Εξερχόμενα Μέλη ΔΕΠ">Εξερχόμενα Μέλη ΔΕΠ</h2>
               </div>
         </div>
           
@@ -480,7 +565,7 @@
     </section>
     <br>
     <section id="progress-section">
-      <h2>Πρόοδος</h2>
+      <h2 data-lang-en = "Progress" data-lang-el="Πρόοδος">Πρόοδος</h2>
       <div class="progressbar-container">
           <div class="progressbar-item">
               <div class="box">
@@ -493,7 +578,7 @@
                       <h2>87<span>%</span></h2>
                     </div>
                   </div>
-                  <h2 class="text">Πρόοδος 1</h2>
+                  <h2 class="text" data-lang-en = "Progress 1" data-lang-el="Πρόοδος 1">Πρόοδος 1</h2>
                 </div>
           </div>
           <div class="progressbar-item">
@@ -507,7 +592,7 @@
                       <h2>32<span>%</span></h2>
                     </div>
                   </div>
-                  <h2 class="text">Πρόοδος 2</h2>
+                  <h2 class="text" data-lang-en = "Progress 2" data-lang-el="Πρόοδος 2">Πρόοδος 2</h2>
                 </div>
           </div>
           <div class="progressbar-item">
@@ -521,7 +606,7 @@
                       <h2>48<span>%</span></h2>
                     </div>
                   </div>
-                  <h2 class="text">Πρόοδος 3</h2>
+                  <h2 class="text" data-lang-en = "Progress 3" data-lang-el="Πρόοδος 3">Πρόοδος 3</h2>
                 </div>
           </div>
       </div>
@@ -547,8 +632,10 @@
           </a></li>
       </ul>
       <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="#">Τηλέφωνο επικοινωνίας: 25310 39000</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">
+        <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Phone to communicate: 25310 39000" data-lang-el="Τηλέφωνο επικοινωνίας: 25310 39000">Τηλέφωνο επικοινωνίας: 25310 39000</a></li>
+        <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Panepistimioupoli, 
+          Komotini" data-lang-el="Πανεπιστημιούπολη, 
+          69100 Κομοτηνή">
           Πανεπιστημιούπολη, 
           69100 Κομοτηνή</a></li>
         <li class="menu__item"><a class="menu__link" href="#">protocol@duth.gr</a></li>
@@ -711,6 +798,7 @@
         const innerDropdownLinksAll = document.querySelectorAll('.inner-dropdown-link');
 
         dropdownLinksAll.forEach(item =>{
+          
           item.addEventListener('click',(event) => {
               event.preventDefault(); // Prevent the default anchor behavior
               var parent_li = item.parentElement;
@@ -744,9 +832,7 @@
                   i.style.margin = "0"
                   i.style.padding = "0"
                   
-                  /*if(index != dropdownItems.length-1){
-                    i.style.marginBottom = "5px"
-                  }*/
+                  
               })
               innerDropdownItemList.forEach((i,index) =>{
                 i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
@@ -756,7 +842,91 @@
               })
               //event.stopPropagation(); // Prevent click event from bubbling up
             })
+            
+
+            /*
+            item.addEventListener('mouseenter',(event) => {
+              event.preventDefault(); // Prevent the default anchor behavior
+              var parent_li = item.parentElement;
+              var dropdown_ul = parent_li.querySelector('.dropdown')
+              var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
+              var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
+              var icon = item.querySelector('i')
+              dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
+              
+              if(dropdown_ul.style.display == 'block'){
+                icon.classList.remove('fas', 'fa-caret-down');
+                if(item.classList.contains('inner-dropdown-link')){
+                  icon.classList.add('fas', 'fa-caret-up');
+                  
+                }else{
+                  icon.classList.add('fas', 'fa-caret-up');
+                }
+                
+                
+              }else{
+                if(item.classList.contains('inner-dropdown-link')){
+                  icon.classList.remove('fas', 'fa-caret-up');
+                }else{
+                  icon.classList.remove('fas', 'fa-caret-up');
+                }
+                
+                icon.classList.add('fas', 'fa-caret-down');
+              }
+              dropdownItemList.forEach((i,index) => {
+                  i.style.display = i.style.display === 'block' ? 'none' : 'block';
+                  i.style.margin = "0"
+                  i.style.padding = "0"
+                  
+                  
+              })
+              innerDropdownItemList.forEach((i,index) =>{
+                i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
+                i.style.margin = '0 auto'
+                
+                i.style.overflow = "auto"
+              })
+              //event.stopPropagation(); // Prevent click event from bubbling up
+            })
+              */
+
+              /*
+            item.addEventListener('mouseenter', (event) => {
+                event.preventDefault();
+                var parent_li = item.parentElement;
+                var dropdown_ul = parent_li.querySelector('.dropdown');
+                var icon = item.querySelector('i');
+
+                // Show the dropdown with transition
+                dropdown_ul.classList.add('show');
+                icon.classList.remove('fas', 'fa-caret-down');
+                icon.classList.add('fas', 'fa-caret-up');
+
+                // Optional: Show dropdown items
+                dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
+                    i.style.display = 'block';
+                });
+            });
+
+            item.addEventListener('mouseleave', (event) => {
+                event.preventDefault();
+                var parent_li = item.parentElement;
+                var dropdown_ul = parent_li.querySelector('.dropdown');
+                var icon = item.querySelector('i');
+
+                // Hide the dropdown with transition
+                dropdown_ul.classList.remove('show');
+                icon.classList.remove('fas', 'fa-caret-up');
+                icon.classList.add('fas', 'fa-caret-down');
+
+                // Optional: Hide dropdown items
+                dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
+                    i.style.display = 'none';
+                });
+            });
+            */
         })
+        
 
         
         /*navBar.forEach(item => {
@@ -785,7 +955,7 @@
 
         // Close dropdown when clicking outside
         /*window.addEventListener('click', () => {
-            dropdownItems.forEach(item => {
+            dropdownItemLines.forEach(item => {
                 const dropdown = item.querySelector('.dropdown');
                 if (dropdown) {
                     dropdown.style.display = 'none'; // Close any open dropdowns
@@ -889,6 +1059,14 @@
 window.addEventListener('resize', function () {
   swiper.update();
 });
+  </script>
+  <script>
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${lang}`);
+        });
+    }
   </script>
       
 </body>

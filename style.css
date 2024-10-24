@@ -761,12 +761,7 @@ section h2{
     
   
   }
-  @media all and (max-width: 1600px){
-    .flags_container{
-        display: none;
-    }
-    
-  }
+  
 
   /* For laptops */
   @media all and (max-width: 1500px) {

@@ -295,7 +295,7 @@
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
               </ul>
             </li>
-            <li><a href="contact.html" data-lang-en = "COMMUNICATE WITH US" data-lang-el="ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a></li>
+            <li><a href="contact.html" data-lang-en = "COMMUNICATE WITH US" data-lang-el="ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ" class="lang">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a></li>
             
 
         </ul>
@@ -1062,12 +1062,35 @@ window.addEventListener('resize', function () {
 });
   </script>
   <script>
+    
     function changeLanguage(lang) {
-        const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
+        /*const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
         elements.forEach(element => {
             element.textContent = element.getAttribute(`data-lang-${lang}`);
+        });*/
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('lang', lang);
+        window.location.href = currentUrl.toString();
+    }
+
+    // Function to set the language based on the URL parameter
+    function setLanguageFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'el'; // Default to English
+        const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
+        
+        elements.forEach(element => {
+            const textElement = element.querySelector('.dropdown-text');
+            if (textElement) {
+                textElement.textContent = element.getAttribute(`data-lang-${lang}`);
+            } else {
+                element.textContent = element.getAttribute(`data-lang-${lang}`);
+            }
         });
     }
+
+    // Call the function on page load
+    window.onload = setLanguageFromUrl;
   </script>
       
 </body>

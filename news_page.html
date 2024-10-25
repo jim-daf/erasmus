@@ -86,13 +86,13 @@
           
           <div class="flag-container" style="padding-top: 10px;">
             <div class="flags_container">
-              <img onclick="changeLanguage('en');" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
+              <img onclick="changeLanguage('en')" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
               <span class="text-lang" onclick="changeLanguage('en')">English</span>
     
             </div>|
               <div class="flags_container">
     
-                <span class="text-lang" onclick=" setLanguageFromUrl();">Greek</span>
+                <span class="text-lang" onclick="changeLanguage('el')">Greek</span>
                 <img onclick="changeLanguage('el')" class="flag" src="images/greek flag.jpg"  alt="" style="width: 25px; height: 14px; padding: 0; ">
     
               </div>
@@ -301,7 +301,7 @@
             // Function to set the language based on the URL parameter
             function setLanguageFromUrl() {
                 const urlParams = new URLSearchParams(window.location.search);
-                const lang = urlParams.get('lang') || 'en'; // Default to English
+                const lang = urlParams.get('lang') || 'el'; // Default to English
                 const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
                 
                 elements.forEach(element => {
@@ -315,7 +315,7 @@
             }
 
             // Call the function on page load
-            //window.onload = setLanguageFromUrl;
+            window.onload = setLanguageFromUrl;
           </script>
 </body>
 </html>

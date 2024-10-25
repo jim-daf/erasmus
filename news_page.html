@@ -72,6 +72,13 @@
             left: 0;
             right: 0;
        }
+       @media all and (max-width: 800px) {
+    .footer{
+        position: relative;
+        top: 30%;
+        
+    }
+}
        .active a{
         background: none;
        }
@@ -84,13 +91,13 @@
           
           <div class="flag-container" style="padding-top: 10px;">
             <div class="flags_container">
-              <img onclick="changeLanguage('en')" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
+              <img onclick="changeLanguage('en'); setLanguageFromUrl();" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
               <span class="text-lang" onclick="changeLanguage('en')">English</span>
     
             </div>|
               <div class="flags_container">
     
-                <span class="text-lang" onclick="changeLanguage('el')">Greek</span>
+                <span class="text-lang" onclick="changeLanguage('el'); setLanguageFromUrl();">Greek</span>
                 <img onclick="changeLanguage('el')" class="flag" src="images/greek flag.jpg"  alt="" style="width: 25px; height: 14px; padding: 0; ">
     
               </div>
@@ -247,15 +254,11 @@
         <section >
             <h2>Erasmus Webinar</h2>
             <br>
-            <p data-lang-el="Καλώς ήρθατε στην σελίδα του Erasmus+ του Δημοκριτείου Πανεπιστημίου Θράκης. Στην καινούργια μας σελίδα προστίθεται συνεχώς νέο υλικό.
-    
-            Θα χαρούμε να επικοινωνήσετε μαζί μας και να μας στείλετε τις ουσιαστικές παρατηρήσεις σας για την βελτίωση της σελίδας μας." data-lang-en="Welcome to the Erasmus+ page of Demokriteio University of Thrace. New material is constantly being added to our new page.
-    
-            We will be happy if you contact us and send us your essential comments for the improvement of our page."> 
-            Το συγκεκριμένο Webinar έχει ως στόχο.... <br><br>
-            <a href="">Σύνδεσμος για Microsoft teams</a>
+            <p data-lang-el="Το συγκεκριμένο Webinar έχει ως στόχο...." data-lang-en="The current Webinar has target to...."> 
+            Το συγκεκριμένο Webinar έχει ως στόχο....</p> <br>
+            <a data-lang-el="Σύνδεσμος για Microsoft teams" data-lang-en="Microsoft teams link" href="#">Σύνδεσμος για Microsoft teams</a>
 
-            </p>
+            
         </section>
         <footer class="footer">
             <div class="waves">
@@ -289,5 +292,35 @@
           </footer>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <script>
+            function changeLanguage(lang) {
+                const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute(`data-lang-${lang}`);
+                });
+                const currentUrl = new URL(window.location.href);
+                currentUrl.searchParams.set('lang', lang);
+                window.location.href = currentUrl.toString();
+            }
+
+            // Function to set the language based on the URL parameter
+            function setLanguageFromUrl() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const lang = urlParams.get('lang') || 'en'; // Default to English
+                const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
+                
+                elements.forEach(element => {
+                    const textElement = element.querySelector('.dropdown-text');
+                    if (textElement) {
+                        textElement.textContent = element.getAttribute(`data-lang-${lang}`);
+                    } else {
+                        element.textContent = element.getAttribute(`data-lang-${lang}`);
+                    }
+                });
+            }
+
+            // Call the function on page load
+            //window.onload = setLanguageFromUrl;
+          </script>
 </body>
 </html>

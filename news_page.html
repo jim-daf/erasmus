@@ -59,19 +59,14 @@
        .text-lang:hover{
         cursor: pointer;
        }
-       footer{
+       .footer{
+        
         position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
        }
-       .footer{
-        display: block;
-        position: absolute;
-        bottom: 0;
-            left: 0;
-            right: 0;
-       }
+       
        @media all and (max-width: 800px) {
     .footer{
         position: relative;
@@ -91,13 +86,13 @@
           
           <div class="flag-container" style="padding-top: 10px;">
             <div class="flags_container">
-              <img onclick="changeLanguage('en'); setLanguageFromUrl();" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
+              <img onclick="changeLanguage('en');" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
               <span class="text-lang" onclick="changeLanguage('en')">English</span>
     
             </div>|
               <div class="flags_container">
     
-                <span class="text-lang" onclick="changeLanguage('el'); setLanguageFromUrl();">Greek</span>
+                <span class="text-lang" onclick=" setLanguageFromUrl();">Greek</span>
                 <img onclick="changeLanguage('el')" class="flag" src="images/greek flag.jpg"  alt="" style="width: 25px; height: 14px; padding: 0; ">
     
               </div>

@@ -484,6 +484,7 @@ section {
     margin: 0 10%;
     margin-bottom: 20px;
     padding: 20px;
+    min-height: 92px;
 }
 
 section p{

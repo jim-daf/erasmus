@@ -295,33 +295,19 @@
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
           <script>
             function changeLanguage(lang) {
-                const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
-                elements.forEach(element => {
-                    element.textContent = element.getAttribute(`data-lang-${lang}`);
-                });
-                const currentUrl = new URL(window.location.href);
-                currentUrl.searchParams.set('lang', lang);
-                window.location.href = currentUrl.toString();
-            }
-
-            // Function to set the language based on the URL parameter
-            function setLanguageFromUrl() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const lang = urlParams.get('lang') || 'el'; // Default to English
-                const elements = document.querySelectorAll('[data-lang-en], [data-lang-el]');
-                
-                elements.forEach(element => {
-                    const textElement = element.querySelector('.dropdown-text');
-                    if (textElement) {
-                        textElement.textContent = element.getAttribute(`data-lang-${lang}`);
-                    } else {
-                        element.textContent = element.getAttribute(`data-lang-${lang}`);
-                    }
+                localStorage.setItem('preferredLanguage', lang);
+                document.documentElement.setAttribute('lang', lang);
+                const elements = document.querySelectorAll('[data-lang-' + lang + ']');
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-lang-' + lang);
                 });
             }
-
-            // Call the function on page load
-            window.onload = setLanguageFromUrl;
+            
+            // On page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+                changeLanguage(preferredLanguage);
+            });
           </script>
           <script>
             const hamburger = document.getElementById('hamburger');

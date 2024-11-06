@@ -156,7 +156,10 @@
   <div class="top">
     <div class="logo">
       <i class='bx bx-universal-access'></i>
+      <span style="font-family: 'CalibriBold';">ΑΜΕΑ</span>
+      
     </div>
+    <button class="close-btn" onclick="closeSidebar()">×</button>
   </div>
   <ul>
     <li>
@@ -362,7 +365,7 @@
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
               </ul>
             </li>
-            <li><a href="contact.html" data-lang-en = "COMMUNICATE WITH US" data-lang-el="ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ" class="lang">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a></li>
+            <li><a href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
             
 
         </ul>
@@ -1218,6 +1221,12 @@ window.addEventListener('resize', function () {
       // Function to reload the current page
       function reloadPage() {
           location.reload();
+      }
+    </script>
+    <script>
+      function closeSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active_sidebar')
       }
     </script>
 </body>

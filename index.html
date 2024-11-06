@@ -11,6 +11,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
       
+
+
         
         .swiper-slide{
             display: flex;
@@ -186,7 +188,21 @@
     <li>
       <a>
         <i class='bx bxs-adjust-alt'></i>
-        <span class="nav-item">Αντίθεση</span>
+        <span class="nav-item" onclick="contrastApply()">Αντίθεση</span>
+      </a>
+      
+    </li>
+    <li>
+      <a>
+        <i class='bx bxs-adjust-alt'></i>
+        <span class="nav-item" onclick="reverseColorsApply()">Αντίθετα χρώματα</span>
+      </a>
+      
+    </li>
+    <li>
+      <a>
+        <i class='bx bxs-adjust-alt'></i>
+        <span class="nav-item" onclick="grayScaleApply()">Γκρίζα χρώματα</span>
       </a>
       
     </li>
@@ -469,7 +485,7 @@
           <div class="swiper-wrapper" >
             <div class="swiper-slide swiper-slide-news">
               <div class="card-news" onclick="location.href = 'news_page.html'">
-                <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpeg" alt="Card Image"> 
+                <img src="images/boys-with-bags-girls-with-touristic-map-look-something-up-somewhere-old-city.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title">Erasmus+ Webinar</h3>
                     <p style="padding-bottom: 3px;" class="card-description news-description" data-lang-el="Παρακολουθείστε νεότερες εξελίξεις του προγράμματος Erasmus του ΔΠΘ" data-lang-en="Follow the latest developments of the Erasmus program of the DUTH" >
@@ -481,7 +497,7 @@
             </div>
             <div class="swiper-slide swiper-slide-news">
               <div class="card-news">
-                <img src="images/as-map-says-we-should-go-this-way.jpeg" alt="Card Image"> 
+                <img src="images/as-map-says-we-should-go-this-way.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 2</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -490,7 +506,7 @@
             </div>
             <div class="swiper-slide swiper-slide-news">
               <div class="card-news">
-                <img src="images/flight-booking-reservation-travel-destination-concept.jpeg" alt="Card Image"> 
+                <img src="images/flight-booking-reservation-travel-destination-concept.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 3</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -499,7 +515,7 @@
             </div>
             <div class="swiper-slide swiper-slide-news">
               <div class="card-news">
-                <img src="images/2687659.jpg" alt="Card Image"> 
+                <img src="images/2687659.jpg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 4</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -508,7 +524,7 @@
             </div>
             <div class="swiper-slide swiper-slide-news">
               <div class="card-news">
-              <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+              <img src="images/man-reading-newspaper.jpeg" alt="Card Image" class="news_image"> 
               <div class="card-content news-content">
                   <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 5</h3>
                   <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -518,7 +534,7 @@
             
               <div class="swiper-slide swiper-slide-news">
                 <div class="card-news">
-                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 6</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -528,7 +544,7 @@
             
               <div class="swiper-slide swiper-slide-news">
                 <div class="card-news">
-                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 7</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -539,7 +555,7 @@
             
               <div class="swiper-slide swiper-slide-news">
                 <div class="card-news">
-                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image" class="news_image" > 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 8</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -549,7 +565,7 @@
             
               <div class="swiper-slide swiper-slide-news">
                 <div class="card-news">
-                <img src="images/man-reading-newspaper.jpeg" alt="Card Image"> 
+                <img src="images/man-reading-newspaper.jpeg" alt="Card Image" class="news_image"> 
                 <div class="card-content news-content">
                     <h3 class="card-title news-title" data-lang-en = "Title" data-lang-el="Τίτλος">Τίτλος 9</h3>
                     <p class="card-description news-description" data-lang-en = "Description..." data-lang-el="Περιγραφή...">Περιγραφή...</p>
@@ -1101,7 +1117,7 @@ window.addEventListener('resize', function () {
         // Function to increase font size of all elements
         function increaseFontSize(amount) {
             // Select all elements in the document
-            const elements = document.querySelectorAll('body *:not(.sidebar *)');
+            var elements = document.querySelectorAll('body *:not(.sidebar *)');
             
             // Loop through each element and increase its font size
             elements.forEach(element => {
@@ -1116,7 +1132,7 @@ window.addEventListener('resize', function () {
         // Function to decrease font size of all elements
         function decreaseFontSize(amount) {
             // Select all elements in the document
-            const elements = document.querySelectorAll('body *:not(.sidebar *)');
+            var elements = document.querySelectorAll('body *:not(.sidebar *)');
             
             // Loop through each element and decrease its font size
             elements.forEach(element => {
@@ -1130,12 +1146,57 @@ window.addEventListener('resize', function () {
         }
         function dyslexicFontApply(){
           // Select all elements in the document
-          const elements = document.querySelectorAll('body *:not(.sidebar *):not(.fas)');
+          var elements = document.querySelectorAll('body *:not(.sidebar *):not(.fas)');
 
           // Loop through each element
           elements.forEach(element => {
               
               element.style.fontFamily = 'DyslexicFont';
+          });
+        }
+        function reverseColorsApply(){
+          // Select all elements in the document
+          var elements = document.querySelectorAll('body');
+          
+
+
+
+          // Loop through each element
+          elements.forEach(element => {
+              
+              element.style.filter = 'invert(100%)'
+          });
+          
+          
+        }
+        function grayScaleApply(){
+          // Select all elements in the document
+          var elements = document.querySelectorAll('body *:not(.sidebar *)');
+          const body = document.querySelector('body')
+          const footer = document.querySelector('footer')
+          const waves = document.querySelectorAll('.wave')
+
+          // Loop through each element
+          elements.forEach(element => {
+              
+              element.style.filter = 'grayscale(100%)'
+              
+              
+          });
+          body.style.background = 'gray'
+          footer.style.background = 'black'
+          waves.forEach(wave =>{
+            wave.style.background = 'black'
+          })
+        }
+        function contrastApply(){
+          // Select all elements in the document
+          var elements = document.querySelectorAll('body *');
+
+          // Loop through each element
+          elements.forEach(element => {
+              
+              element.style.filter = 'contrast(120%)'
           });
         }
     </script>
@@ -1165,6 +1226,7 @@ window.addEventListener('resize', function () {
         body.style.background = "#7b1511"
       }
     </script>
+
 </body>
 
 </html>

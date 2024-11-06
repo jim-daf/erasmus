@@ -66,6 +66,7 @@
     padding: 0;
     transition: all 0.3s ease;
     z-index: 1000000;
+    overflow-y: auto;
 }
 .sidebar.active_sidebar {
     padding: 0.4rem 0.8rem 0.8rem 0;

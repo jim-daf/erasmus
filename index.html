@@ -154,11 +154,11 @@
   <div class="icon-container">
     <img id="amea_btn" src="images/accessibility_second_effort.png" alt="Icon" class="floating-icon">
 </div>
-<div class="sidebar">
+<div class="sidebar" id="sidebar_amea">
   <div class="top">
     <div class="logo">
-      <i class='bx bx-universal-access'></i>
-      <span style="font-family: 'CalibriBold';">ΑΜΕΑ</span>
+      <i id="universal-access" class='bx bx-universal-access'></i>
+      <span id="amea_txt" style="font-family: 'CalibriBold';">ΑΜΕΑ</span>
       
     </div>
     <button class="close-btn" onclick="closeSidebar()">×</button>
@@ -180,28 +180,28 @@
     </li>
     <li>
       <a>
-        <i class='bx bx-text'></i>
-        <span class="nav-item" onclick="dyslexicFontApply()">Δυσλεξία</span>
+        <i class='bx bx-font-family' ></i>
+        <span class="nav-item" onclick="dyslexicFontApply()">Για δυσλεκτικούς</span>
       </a>
       
     </li>
     <li>
       <a>
-        <i class='bx bxs-adjust-alt'></i>
+        <i class='bx bx-adjust'></i>
         <span class="nav-item" onclick="contrastApply()">Αντίθεση</span>
       </a>
       
     </li>
     <li>
       <a>
-        <i class='bx bxs-adjust-alt'></i>
+        <i class='bx bx-palette' ></i>
         <span class="nav-item" onclick="reverseColorsApply()">Αντίθετα χρώματα</span>
       </a>
       
     </li>
     <li>
       <a>
-        <i class='bx bxs-adjust-alt'></i>
+        <i class='bx bx-color-fill' ></i>
         <span class="nav-item" onclick="grayScaleApply()">Γκρίζα χρώματα</span>
       </a>
       
@@ -381,7 +381,7 @@
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
               </ul>
             </li>
-            <li><a href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+            <li id="epikoinonia_nav_item"><a href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
             
 
         </ul>
@@ -1156,8 +1156,8 @@ window.addEventListener('resize', function () {
         }
         function reverseColorsApply(){
           // Select all elements in the document
-          var elements = document.querySelectorAll('body');
-          
+          var elements = document.querySelectorAll('*:not(img):not(section *):not(#universal-access):not(#amea_txt):not(#epikoinonia_nav_item)');
+          var body = document.querySelector('body')
 
 
 
@@ -1166,6 +1166,8 @@ window.addEventListener('resize', function () {
               
               element.style.filter = 'invert(100%)'
           });
+          document.getElementById('#sidebar_amea').style.position='fixed'
+          
           
           
         }

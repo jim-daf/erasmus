@@ -73,7 +73,7 @@
     width: calc(100% - 250px);
 }
 .sidebar.active_sidebar{
-    width: 200px;
+    width: 214px;
 
 }
 .sidebar #sidebar_btn{
@@ -1174,7 +1174,10 @@ section h2{
         
         
     }
+    .sidebar.active_sidebar{
+        width: 200px;
     
+    }
     
   
   }

@@ -135,7 +135,7 @@
         font-size: 15px;
        }
        
-        
+
         
         
     </style>
@@ -178,8 +178,8 @@
     </li>
     <li>
       <a>
-        <i class='bx bx-palette'></i>
-        <span class="nav-item">Αρνητικά χρώματα</span>
+        <i class='bx bx-text'></i>
+        <span class="nav-item" onclick="dyslexicFontApply()">Δυσλεξία</span>
       </a>
       
     </li>
@@ -193,7 +193,7 @@
     <li>
       <a>
         <i class='bx bxs-color-fill' ></i>
-        <span class="nav-item">Αλλαγή φόντου</span>
+        <span class="nav-item" onclick="changeBackground()" >Αλλαγή φόντου</span>
       </a>
       
     </li>
@@ -915,87 +915,7 @@
             })
             
 
-            /*
-            item.addEventListener('mouseenter',(event) => {
-              event.preventDefault(); // Prevent the default anchor behavior
-              var parent_li = item.parentElement;
-              var dropdown_ul = parent_li.querySelector('.dropdown')
-              var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
-              var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
-              var icon = item.querySelector('i')
-              dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
-              
-              if(dropdown_ul.style.display == 'block'){
-                icon.classList.remove('fas', 'fa-caret-down');
-                if(item.classList.contains('inner-dropdown-link')){
-                  icon.classList.add('fas', 'fa-caret-up');
-                  
-                }else{
-                  icon.classList.add('fas', 'fa-caret-up');
-                }
-                
-                
-              }else{
-                if(item.classList.contains('inner-dropdown-link')){
-                  icon.classList.remove('fas', 'fa-caret-up');
-                }else{
-                  icon.classList.remove('fas', 'fa-caret-up');
-                }
-                
-                icon.classList.add('fas', 'fa-caret-down');
-              }
-              dropdownItemList.forEach((i,index) => {
-                  i.style.display = i.style.display === 'block' ? 'none' : 'block';
-                  i.style.margin = "0"
-                  i.style.padding = "0"
-                  
-                  
-              })
-              innerDropdownItemList.forEach((i,index) =>{
-                i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
-                i.style.margin = '0 auto'
-                
-                i.style.overflow = "auto"
-              })
-              //event.stopPropagation(); // Prevent click event from bubbling up
-            })
-              */
-
-              /*
-            item.addEventListener('mouseenter', (event) => {
-                event.preventDefault();
-                var parent_li = item.parentElement;
-                var dropdown_ul = parent_li.querySelector('.dropdown');
-                var icon = item.querySelector('i');
-
-                // Show the dropdown with transition
-                dropdown_ul.classList.add('show');
-                icon.classList.remove('fas', 'fa-caret-down');
-                icon.classList.add('fas', 'fa-caret-up');
-
-                // Optional: Show dropdown items
-                dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
-                    i.style.display = 'block';
-                });
-            });
-
-            item.addEventListener('mouseleave', (event) => {
-                event.preventDefault();
-                var parent_li = item.parentElement;
-                var dropdown_ul = parent_li.querySelector('.dropdown');
-                var icon = item.querySelector('i');
-
-                // Hide the dropdown with transition
-                dropdown_ul.classList.remove('show');
-                icon.classList.remove('fas', 'fa-caret-up');
-                icon.classList.add('fas', 'fa-caret-down');
-
-                // Optional: Hide dropdown items
-                dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
-                    i.style.display = 'none';
-                });
-            });
-            */
+            
         })
         
 
@@ -1208,6 +1128,16 @@ window.addEventListener('resize', function () {
                 element.style.fontSize = newSize + 'px';
             });
         }
+        function dyslexicFontApply(){
+          // Select all elements in the document
+          const elements = document.querySelectorAll('body *:not(.sidebar *):not(.fas)');
+
+          // Loop through each element
+          elements.forEach(element => {
+              
+              element.style.fontFamily = 'DyslexicFont';
+          });
+        }
     </script>
     <script>
       let btn = document.querySelector("#amea_btn")
@@ -1227,6 +1157,12 @@ window.addEventListener('resize', function () {
       function closeSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active_sidebar')
+      }
+    </script>
+    <script>
+      function changeBackground(){
+        const body = document.querySelector('body');
+        body.style.background = "#7b1511"
       }
     </script>
 </body>

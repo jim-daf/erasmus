@@ -7,6 +7,10 @@
     font-family: 'CalibriNorm';
     src: url(Fonts/font_Calibri/Calibri.ttf);
 }
+@font-face {
+    font-family: 'DyslexicFont';
+    src: url(Fonts/font_Dyslexic/OpenDyslexic-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;

@@ -1383,6 +1383,13 @@ window.addEventListener('resize', function () {
               element.style.filter = 'contrast(120%)'
           });
         }
+        function removeFilters(){
+          var elements = document.querySelectorAll('body *');
+          elements.forEach(element => {
+            element.style.filter = 'none'
+            element.style.fontFamily = 'CalibriNorm'
+          })
+        }
     </script>
     <script>
       let btn = document.querySelector("#amea_btn")

@@ -117,6 +117,9 @@
     
   }
 }
+.email_address:hover{
+  cursor: pointer;
+}
 
        
     </style>
@@ -559,7 +562,7 @@
                     <br>
                     <p>Ελένη Μαυρίδου</p>
                     <p>Τηλέφωνο</p>
-                    <p style="text-decoration: underline;">emavr@duth.gmail.com</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #9932CC;">emavr@duth.gmail.com</p>
                     
                   </div>
                 
@@ -572,7 +575,7 @@
                     <br>
                     <p>Άννα Αγραπετίδου</p>
                     <p>2531039103</p>
-                    <p style="text-decoration: underline;">aagrapet@econ.duth.gr</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #1c73b1">aagrapet@econ.duth.gr</p>
                     
                   </div>
                 
@@ -585,7 +588,7 @@
                     <br>
                     <p>Ευγενία Θεοχαρίδου</p>
                     <p>2531039102</p>
-                    <p style="text-decoration: underline;">theochae@affil.duth.gr</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #800020;">theochae@affil.duth.gr</p>
                     
                   </div>
                 
@@ -598,7 +601,7 @@
                     <br>
                     <p>Αθανασία Μπρατίκα</p>
                     <p>2531039085</p>
-                    <p style="text-decoration: underline;">abratika@affil.duth.gr</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline;  color: #008080;">abratika@affil.duth.gr</p>
                     
                   </div>
                 
@@ -611,7 +614,7 @@
                     <br>
                     <p>Χαρά Τριάντη</p>
                     <p>2531039104</p>
-                    <p style="text-decoration: underline;">ctrianti@affil.duth.gr</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color:#007BFF ;">ctrianti@affil.duth.gr</p>
                     
                   </div>
                 
@@ -624,7 +627,7 @@
                     <br>
                     <p>Ευγενία Γεωργαντζή</p>
                     <p>2531039086</p>
-                    <p style="text-decoration: underline;">evgeorga@affil.duth.gr</p>
+                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #28A745;">evgeorga@affil.duth.gr</p>
                     
                   </div>
                 
@@ -635,7 +638,7 @@
             
         </section>
         
-        
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
           <script>
@@ -991,6 +994,28 @@
             const body = document.querySelector('body');
             body.style.background = "#7b1511"
           }
+        </script>
+        
+
+        <script>
+          const email_items=document.querySelectorAll('.email_address');
+          email_items.forEach(item => {
+            item.addEventListener('click',function(){
+              navigator.clipboard.writeText(this.textContent).then(() => {
+                    // Show alert message
+                    Swal.fire({
+                      position: "center",
+                      icon: "success",
+                      title: "Αντιγράφτηκε η διεύθυνση email στη συσκευή σας",
+                      showConfirmButton: false,
+                      timer: 1500
+                    });
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            })
+          })  
+          
         </script>
 </body>
 <footer class="footer">

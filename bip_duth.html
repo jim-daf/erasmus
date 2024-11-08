@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-el="Επικοινωνία" data-lang-en="Contact">Επικοινωνία</title>
-    
+    <title data-lang-en="Erasmus+ DUTH" data-lang-el="Erasmus+ ΔΠΘ">Καινούριο site Erasmus</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/Democritus_University_of_Thrace_New_Logo.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        
                a:hover{
         cursor: pointer;
        }
@@ -62,23 +60,26 @@
        .text-lang:hover{
         cursor: pointer;
        }
-       
        .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
-    top: 30%;
-    
     
     
 }
-@media all and (max-height: 800px) {
+
+@media all and (max-height: 900px) {
     .footer{
-      top: 25%;
+        position: relative;
+        top: 25%;
+        
     }
 }
+
 @media all and (max-width: 800px) {
-  .footer{
-      top: 25%;
+    .footer{
+        position: relative;
+        top: 25%;
+        
     }
 }
 @media all and (max-height: 500px) {
@@ -87,40 +88,6 @@
         top: 140px;       
     }
 }
-
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
-  grid-gap: 20px;
-  
-}
-
-.grid article {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-}
-
-.grid article img {
-  max-width: 100%;
-}
-
-.grid .text {
-  padding: 20px;
-}
-@media all and (max-width: 1100px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-gap: 20px;
-    
-  }
-}
-.email_address:hover{
-  cursor: pointer;
-}
-
        
     </style>
 </head>
@@ -340,16 +307,16 @@
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
                 </ul>
               </li>
-              <li class="active" id="epikoinonia_nav_item2"><a style="color: #000;" href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+              <li id="epikoinonia_nav_item2"><a href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
   
-              <li>
-                <a class="dropdown-link" id="mixedLink">
-                  <span style="font-family: 'CalibriBold';" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
+              <li class="active">
+                <a class="active"  class="dropdown-link" id="mixedLink">
+                  <span style="font-family: 'CalibriBold'; color: #000;" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
                    <i id="mikta" class="fas fa-caret-down"></i>
                   </a>
                 <ul class="dropdown" style="display: none;">
                   <li class="dropdown-item">
-                    <a href="bip_duth.html" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
+                    <a href="#" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
                   </li>
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "BIPs INVOLVING DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
@@ -368,7 +335,7 @@
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
                 </ul>
               </li>
-              <li class="active" id="epikoinonia_nav_item"><a style="color: #000;" href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+              <li id="epikoinonia_nav_item"><a href="contact.html" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
   
   
           </ul>
@@ -478,10 +445,10 @@
                   
                 </ul>
               </li>
-              <li id="mixedIntensive_nav_item" style="padding: 0px 0 5px 0;">
+              <li id="mixedIntensive_nav_item" style="padding: 0px 0 5px 0;" class="active">
                 <a class="dropdown-link" style="white-space: nowrap;">
-                  <span style="font-family: 'CalibriBold'; white-space: nowrap; font-size: 15px;" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
-                   <i id="mikta" class="fas fa-caret-down"></i>
+                  <span style="font-family: 'CalibriBold'; white-space: nowrap; font-size: 15px; color: #000;" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
+                   <i style="color: #000;" id="mikta" class="fas fa-caret-down"></i>
                   </a>
                 <ul class="dropdown" style="
                 position: relative;
@@ -502,7 +469,7 @@
                 margin-top: 20px auto;
                 box-shadow: 5px 5px 5px 5px;">
                   <li class="dropdown-item">
-                    <a href="bip_duth.html" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
+                    <a href="#" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
                   </li>
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "BIPs INVOLVING DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
                   <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
@@ -539,7 +506,7 @@
                 </ul>
               </li>
               
-              <li class="active"  style="padding: 0;" id="epikoinonia_side_nav_item"><a href="contact.html" style="color: #000; font-size: 15px;" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+              <li  style="padding: 0;" id="epikoinonia_side_nav_item"><a href="contact.html" style="font-size: 15px;" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ" class="lang">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
   
               
               
@@ -549,96 +516,34 @@
       </div>
         <br>
         <br>
-        <section style="background-color: transparent; background: transparent; box-shadow: none;">
-          <h2 style="color: #fff; font-family: 'CalibriBold';" data-lang-el="Γραφείο Erasmus+ Κομοτηνή" data-lang-en="Office of Erasmus+ in Komotini">Γραφείο Erasmus+ Κομοτηνή</h2>
-          <div class="container">
+        <section >
+            <h3 data-lang-el="Summer School “Sustainable Samothraki 2023” in Greece (ERASMUS BIP Blended Intensive Programme)" data-lang-en="Summer School “Sustainable Samothraki 2023” in Greece (ERASMUS BIP Blended Intensive Programme)">Summer School “Sustainable Samothraki 2023” in Greece (ERASMUS BIP Blended Intensive Programme)</h2>
             
-            <main class="grid">
-              
-              <article>
-                <img style="height: 250px; width: 250px;" src="images/[freepicdownloader.com]-customer-service-woman-with-long-hair-sitting-table-with-laptop-with-headphones-microphone-normal.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-el="Υπεύθυνη γραφείου Erasmus+" data-lang-en="Responsible for Erasmus+ office">Υπεύθυνη γραφείου Erasmus+</h3>
-                    <br>
-                    <p data-lang-el="Ελένη Μαυρίδου" data-lang-en="Eleni Mavridou">Ελένη Μαυρίδου</p>
-                    <p>2541076085</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #9932CC;">emavr@duth.gmail.com</p>
-                    
-                  </div>
-                
-                
-              </article>
-              <article>
-                <img style="height: 250px; width: 250px;" src="images/5114865.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-el="Υπεύθυνη για οικονομικά θέματα" data-lang-en="Responsible for economic issues">Υπεύθυνη για οικονομικά θέματα</h3>
-                    <br>
-                    <p data-lang-el="Άννα Αγραπετίδου" data-lang-en="Anna Agrapetidou">Άννα Αγραπετίδου</p>
-                    <p>2531039103</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #1c73b1">aagrapet@econ.duth.gr</p>
-                    
-                  </div>
-                
-                
-              </article>
-              <article>
-                <img style="height: 250px; width: 280px;" src="images/[freepicdownloader.com]-woman-working-received-phone-vector-flat-style-illustration-design-normal.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-el="Κινητικότητα Προσωπικού / Μικτά Εντατικά Προγράμματα (BIP)" data-lang-en="Student Mobility / Mixed Intensive Programmes (BIP)">Κινητικότητα Προσωπικού / Μικτά Εντατικά Προγράμματα (BIP)</h3>
-                    <br>
-                    <p data-lang-en="Evgenia Theoharidou" data-lang-el="Ευγενία Θεοχαρίδου">Ευγενία Θεοχαρίδου</p>
-                    <p>2531039102</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #800020;">theochae@affil.duth.gr</p>
-                    
-                  </div>
-                
-                
-              </article>
-              <article>
-                <img style="height: 250px; width: 250px;" src="images/5132732.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-en="International Mobility (ICM)" data-lang-el="Διεθνής Κινητικότητα (ICM)">Διεθνής Κινητικότητα (ICM)</h3>
-                    <br>
-                    <p data-lang-en="Athanasia Mpratika" data-lang-el="Αθανασία Μπρατίκα">Αθανασία Μπρατίκα</p>
-                    <p>2531039085</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline;  color: #008080;">abratika@affil.duth.gr</p>
-                    
-                  </div>
-                
-                
-              </article>
-              <article>
-                <img style="height: 250px; width: 250px;" src="images/5138237.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-el="Υπεύθυνη για τους εξερχόμενους φοιτητές" data-lang-en="Responsible for the outgoing students">Υπεύθυνη για τους εξερχόμενους φοιτητές </h3>
-                    <br>
-                    <p data-lang-el="Χαρά Τριάντη" data-lang-en="Hara Trianti">Χαρά Τριάντη</p>
-                    <p>2531039104</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color:#007BFF ;">ctrianti@affil.duth.gr</p>
-                    
-                  </div>
-                
-                
-              </article>
-              <article>
-                <img style="height: 250px; width: 250px;" src="images/5129118.jpg" alt="Sample photo">
-                  <div class="text" style="text-align: left;">
-                    <h3 data-lang-el="Υπεύθυνη για τους εξερχόμενους φοιτητές" data-lang-en="Responsible for the outgoing students">Υπεύθυνη για τους εξερχόμενους φοιτητές </h3>
-                    <br>
-                    <p data-lang-el="Ευγενία Γεωργαντζή" data-lang-en="Evgenia Georgantzi">Ευγενία Γεωργαντζή</p>
-                    <p>2531039086</p>
-                    <p onclick="emailClick()" class="email_address" style="text-decoration: underline; color: #28A745;">evgeorga@affil.duth.gr</p>
-                    
-                  </div>
-                
-                
-              </article>
-            </main>
-          </div>
             
+            <br>
+            <p data-lang-el="Cooperation between Democritus University of Thrace, Komotini (Coordinating and Receiving
+            Institution), University of Life Sciences and Natural Resources (BOKU Vienna) and University of Èvora, Portugal.
+            
+            8th summer school on the Greek island of Samothraki, accompanying an effort at a
+            sustainability transition in collaboration with local actors and supporting the island to
+            become a member of Unesco‘s international Man-and-the-Biosphere community." 
+            data-lang-en="Cooperation between Democritus University of Thrace, Komotini (Coordinating and Receiving
+            Institution), University of Life Sciences and Natural Resources (BOKU Vienna) and University of Èvora, Portugal.
+            
+            8th summer school on the Greek island of Samothraki, accompanying an effort at a
+            sustainability transition in collaboration with local actors and supporting the island to
+            become a member of Unesco‘s international Man-and-the-Biosphere community."> 
+            Cooperation between Democritus University of Thrace, Komotini (Coordinating and Receiving
+Institution), University of Life Sciences and Natural Resources (BOKU Vienna) and University of Èvora, Portugal.
+
+8th summer school on the Greek island of Samothraki, accompanying an effort at a
+sustainability transition in collaboration with local actors and supporting the island to
+become a member of Unesco‘s international Man-and-the-Biosphere community. <br><br>
+            <a href="index.html">Σύνδεσμος για το site μας</a>
+
+            </p>
         </section>
         
-          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
           <script>
@@ -745,87 +650,7 @@
                 })
                 
     
-                /*
-                item.addEventListener('mouseenter',(event) => {
-                  event.preventDefault(); // Prevent the default anchor behavior
-                  var parent_li = item.parentElement;
-                  var dropdown_ul = parent_li.querySelector('.dropdown')
-                  var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
-                  var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
-                  var icon = item.querySelector('i')
-                  dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
-                  
-                  if(dropdown_ul.style.display == 'block'){
-                    icon.classList.remove('fas', 'fa-caret-down');
-                    if(item.classList.contains('inner-dropdown-link')){
-                      icon.classList.add('fas', 'fa-caret-up');
-                      
-                    }else{
-                      icon.classList.add('fas', 'fa-caret-up');
-                    }
-                    
-                    
-                  }else{
-                    if(item.classList.contains('inner-dropdown-link')){
-                      icon.classList.remove('fas', 'fa-caret-up');
-                    }else{
-                      icon.classList.remove('fas', 'fa-caret-up');
-                    }
-                    
-                    icon.classList.add('fas', 'fa-caret-down');
-                  }
-                  dropdownItemList.forEach((i,index) => {
-                      i.style.display = i.style.display === 'block' ? 'none' : 'block';
-                      i.style.margin = "0"
-                      i.style.padding = "0"
-                      
-                      
-                  })
-                  innerDropdownItemList.forEach((i,index) =>{
-                    i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
-                    i.style.margin = '0 auto'
-                    
-                    i.style.overflow = "auto"
-                  })
-                  //event.stopPropagation(); // Prevent click event from bubbling up
-                })
-                  */
-    
-                  /*
-                item.addEventListener('mouseenter', (event) => {
-                    event.preventDefault();
-                    var parent_li = item.parentElement;
-                    var dropdown_ul = parent_li.querySelector('.dropdown');
-                    var icon = item.querySelector('i');
-    
-                    // Show the dropdown with transition
-                    dropdown_ul.classList.add('show');
-                    icon.classList.remove('fas', 'fa-caret-down');
-                    icon.classList.add('fas', 'fa-caret-up');
-    
-                    // Optional: Show dropdown items
-                    dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
-                        i.style.display = 'block';
-                    });
-                });
-    
-                item.addEventListener('mouseleave', (event) => {
-                    event.preventDefault();
-                    var parent_li = item.parentElement;
-                    var dropdown_ul = parent_li.querySelector('.dropdown');
-                    var icon = item.querySelector('i');
-    
-                    // Hide the dropdown with transition
-                    dropdown_ul.classList.remove('show');
-                    icon.classList.remove('fas', 'fa-caret-up');
-                    icon.classList.add('fas', 'fa-caret-down');
-    
-                    // Optional: Hide dropdown items
-                    dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
-                        i.style.display = 'none';
-                    });
-                });
-                */
+                
             })
             
     
@@ -996,56 +821,36 @@
           }
         </script>
         
-
-        <script>
-          const email_items=document.querySelectorAll('.email_address');
-          email_items.forEach(item => {
-            item.addEventListener('click',function(){
-              navigator.clipboard.writeText(this.textContent).then(() => {
-                    // Show alert message
-                    Swal.fire({
-                      position: "center",
-                      icon: "success",
-                      title: "Αντιγράφτηκε η διεύθυνση email στη συσκευή σας",
-                      showConfirmButton: false,
-                      timer: 1500
-                    });
-                }).catch(err => {
-                    console.error('Failed to copy: ', err);
-                });
-            })
-          })  
           
-        </script>
 </body>
-<footer class="footer">
-    <div class="waves">
-      <div class="wave" id="wave1"></div>
-      <div class="wave" id="wave2"></div>
-      <div class="wave" id="wave3"></div>
-      <div class="wave" id="wave4"></div>
-    </div>
-    <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/duth.gr/">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="https://gr.linkedin.com/school/duth-/">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/duthgr/?hl=en">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a></li>
-    </ul>
-    <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Phone to communicate: 25310 39000" data-lang-el="Τηλέφωνο επικοινωνίας: 25310 39000">Τηλέφωνο επικοινωνίας: 25310 39000</a></li>
-      <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Panepistimioupoli, 
-        Komotini" data-lang-el="Πανεπιστημιούπολη, 
-        69100 Κομοτηνή">
-        Πανεπιστημιούπολη, 
-        69100 Κομοτηνή</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">protocol@duth.gr</a></li>
+<footer class="footer" id="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/duth.gr/">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://gr.linkedin.com/school/duth-/">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/duthgr/?hl=en">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Phone to communicate: 25310 39000" data-lang-el="Τηλέφωνο επικοινωνίας: 25310 39000">Τηλέφωνο επικοινωνίας: 25310 39000</a></li>
+    <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Panepistimioupoli, 
+      Komotini" data-lang-el="Πανεπιστημιούπολη, 
+      69100 Κομοτηνή">
+      Πανεπιστημιούπολη, 
+      69100 Κομοτηνή</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">protocol@duth.gr</a></li>
 
-    </ul>
-    <p>&copy;2024 Dimitrios Dafnis | All Rights Reserved</p>
-  </footer>
+  </ul>
+  <p>&copy;2024 Dimitrios Dafnis | All Rights Reserved</p>
+</footer>
 </html>

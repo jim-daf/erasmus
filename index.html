@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/Democritus_University_of_Thrace_New_Logo.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="build/pdf.mjs" type="module"></script>
+    <link rel="stylesheet" href="web/viewer.css">
+    <script src="web/viewer.mjs"></script>
+    
     <style>
       
 
@@ -167,56 +171,56 @@
     <li>
       <a>
         <i class='bx bx-font-size' ></i>
-        <span class="nav-item" onclick="increaseFontSize(2)"> Αύξηση μεγέθους</span>
-      </a>
+        <span class="nav-item" onclick="increaseFontSize(2)" data-lang-el="Αύξηση μεγέθους" data-lang-en="Increase font-size"> Αύξηση μεγέθους</span>
+      </a> 
       
     </li>
     <li>
       <a>
         <i class='bx bx-font-size' ></i>
-        <span class="nav-item" onclick="decreaseFontSize(2)"> Μείωση μεγέθους</span>
+        <span class="nav-item" onclick="decreaseFontSize(2)" data-lang-el="Μείωση μεγέθους" data-lang-en="Decrease font-size"> Μείωση μεγέθους</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bx-font-family' ></i>
-        <span class="nav-item" onclick="dyslexicFontApply()">Για δυσλεκτικούς</span>
+        <span class="nav-item" onclick="dyslexicFontApply()" data-lang-el="Για δυσλεκτικούς" data-lang-en="Dyslexia font">Για δυσλεκτικούς</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bx-adjust'></i>
-        <span class="nav-item" onclick="contrastApply()">Αντίθεση</span>
+        <span class="nav-item" onclick="contrastApply()" data-lang-el="Αντίθεση" data-lang-en="Contrast">Αντίθεση</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bx-palette' ></i>
-        <span class="nav-item" onclick="reverseColorsApply()">Αντίθετα χρώματα</span>
+        <span class="nav-item" onclick="reverseColorsApply()" data-lang-el="Αντίθετα χρώματα" data-lang-en="Opposite colors">Αντίθετα χρώματα</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bx-color-fill' ></i>
-        <span class="nav-item" onclick="grayScaleApply()">Γκρίζα χρώματα</span>
+        <span class="nav-item" onclick="grayScaleApply()" data-lang-el="Γκρίζα χρώματα" data-lang-en="Gray colors">Γκρίζα χρώματα</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bxs-color-fill' ></i>
-        <span class="nav-item" onclick="changeBackground()" >Αλλαγή φόντου</span>
+        <span class="nav-item" onclick="changeBackground()" data-lang-el="Αλλαγή φόντου" data-lang-en="Change background" >Αλλαγή φόντου</span>
       </a>
       
     </li>
     <li>
       <a>
         <i class='bx bx-revision'></i>
-        <span class="nav-item" onclick="reloadPage()">Επαναφορά</span>
+        <span class="nav-item" onclick="reloadPage()" data-lang-el="Επαναφορά" data-lang-en="Reload">Επαναφορά</span>
       </a>
       
     </li>
@@ -528,7 +532,7 @@
               margin-top: 20px auto;
               box-shadow: 5px 5px 5px 5px;">
                 <li class="dropdown-item">
-                  <a href="#" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
+                  <a href="bip_duth.html" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
                 </li>
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "BIPs INVOLVING DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
                 <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
@@ -764,12 +768,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination new-pagination"></div>
         </div>
-        
-          
-          
 
-        
-        
     </section>
     <section>
       <h2 data-lang-en = "Erasmus+ in DUTH" data-lang-el="Το Erasmus+ στο Δ.Π.Θ.">Το Erasmus+ στο Δ.Π.Θ.</h2>
@@ -780,11 +779,14 @@
       Από το 1996 το Δ.Π.Θ. συμμετέχει ενεργά λειτουργώντας ως φορέας υποδοχής και προέλευσης για εκατοντάδες εισερχόμενους και εξερχόμενους φοιτητές και διδάσκοντες τόσο του Δ.Π.Θ. όσο και ξένων Ιδρυμάτων που συμμετέχουν στο Πρόγραμμα κινητικότητας Erasmus.</p>
   </section>
   <section>
-    <h2 data-lang-en = "Κανονισμός Erasmus+" data-lang-el="Κανονισμός Erasmus+">Κανονισμός Erasmus+</h2>
+    <h2 data-la ng-en = "Κανονισμός Erasmus+" data-lang-el="Κανονισμός Erasmus+">Κανονισμός Erasmus+</h2>
     <br>
     <iframe src="Παράρτημα-9.-Εσωτερικός-Κανονισμός-Λειτουργίας-Προγράμματος-Εrasmus-του-ΔΠΘ.pdf" width="100%" height="600px" style="border: none;">
       <a href="Παράρτημα-9.-Εσωτερικός-Κανονισμός-Λειτουργίας-Προγράμματος-Εrasmus-του-ΔΠΘ.pdf">Download PDF</a>
   </iframe>
+  <a data-lang-en = "Download PDF" data-lang-el="Κατεβάστε το αρχείο πατώντας εδώ" href="Παράρτημα-9.-Εσωτερικός-Κανονισμός-Λειτουργίας-Προγράμματος-Εrasmus-του-ΔΠΘ.pdf" download>Κατεβάστε το αρχείο πατώντας εδώ</a>
+  
+  
 </section>
     <section id="stats-section">
         <h2 data-lang-en = "Stats" data-lang-el="Αριθμοί">Αριθμοί</h2>
@@ -1438,6 +1440,10 @@ window.addEventListener('resize', function () {
         body.style.background = "#7b1511"
       }
     </script>
+    
+    
+  
+  
 
 </body>
 

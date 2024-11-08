@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Φόρμα Συμπλήρωσης</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Democritus_University_of_Thrace_New_Logo.png" type="image/x-icon">
+
+    <style>
+        
+               a:hover{
+        cursor: pointer;
+       }
+       .nav-bar2 {
+    width: 100%;
+}
+/*
+.nav-bar2 ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0; 
+    list-style: none; 
+}
+#logo_erasmus{
+  margin: 0 auto;
+}
+  */     
+       .flag-container{
+        
+        
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: flex-end;
+        justify-items: flex-end;
+        align-items: center;
+        align-content: center;
+        padding-right: 10px;
+       
+        
+        
+       }
+       .flag-container img:hover{
+        cursor: pointer;
+       }
+       .nav-bar2 ul{
+        /*
+        width: 100%;
+        justify-items: center;
+        justify-content: space-between;
+        */
+       }
+
+       .nav-bar ul li img:hover{
+        cursor: pointer;
+       }
+       .text-lang:hover{
+        cursor: pointer;
+       }
+       
+       .footer {
+    position: relative;
+    bottom: 0;
+    top: 25%
+    
+}
+input[type=text],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+select:hover{
+  cursor: pointer;
+  
+}
+
+input[type=submit] {
+  background: 
+
+  linear-gradient(-45deg,  #445279 112%,  transparent 11% )
+
+  ;
+  
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background: #265797;
+}
+
+.container {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  background-color: #d9d9d9;
+  padding: 20px;
+  /* Enhanced box shadow */
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15), /* Larger, softer shadow */
+    0 8px 30px rgba(0, 0, 0, 0.1);  /* Secondary shadow for depth */
+} 
+#form_section{
+  width: max-content;
+  margin: auto;
+  
+  padding: 20px 25px 1px 25px;
+}
+@media all and (max-width:1200px){
+  #form_section{
+    width: 90%;
+  }
+  .container{
+    width: 100%;
+    
+  }
+  input[type=text], select, textarea {
+  width: 100%;
+  }
+  
+}
+@media all and (max-width:800px){
+  #form_section{
+    width: 90%;
+    background: transparent;
+    
+
+  }
+  #form_section h2 {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  input[type=text], select, textarea {
+  width: 100%;
+  
+  
+}
+}
+@media all and (max-height: 900px) {
+    .footer{
+        position: relative;
+        top: 25%;
+        
+    }
+}
+@media all and (max-width: 800px) {
+    .footer{
+        position: relative;
+        top: 25%;
+        
+    }
+}
+select{
+  appearance: none;
+}
+select.classic {
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(0, 0, 0) 50%),
+    linear-gradient(135deg, rgb(0, 0, 0) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px),
+    calc(100% - 15px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="nav-bar2 nav-bar3" style="background-color: #fff;">
+        <ul>
+          
+          
+          <div class="flag-container" style="padding-top: 10px;">
+            <div class="flags_container">
+              <img onclick="changeLanguage('en')" class="flag" src="images/uk flag.jpg"  alt="" style="width: 25px;  height: 14px;">
+              <span class="text-lang" onclick="changeLanguage('en')">English</span>
+    
+            </div>|
+              <div class="flags_container">
+    
+                <span class="text-lang" onclick="changeLanguage('el')">Greek</span>
+                <img onclick="changeLanguage('el')" class="flag" src="images/greek flag.jpg"  alt="" style="width: 25px; height: 14px; padding: 0; ">
+    
+              </div>
+            
+          </div>
+          
+    
+        </ul>
+      </div>
+      <div class="nav-bar2" style="background-color: #fff;">
+          <ul>
+            
+            <li id="logo_dimokritus" style="box-shadow: none;" ><img  src="images/Democritus_University_of_Thrace_New_Logo.png"  alt="" style="width: 90px; "></li>
+            <li id="logo_erasmus" style="box-shadow: none;"><img  src="images/erasmus_logo.png"  alt="" style="width: 250px;"></li>
+            
+            
+    
+          </ul>
+        </div>
+       
+        
+        
+          <div class="nav-bar" >
+            <div class="hamburger" id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+            <ul id="nav-list">
+                
+                <li ><a href="index.html" data-lang-en = "HOME" data-lang-el="ΑΡΧΙΚΗ">ΑΡΧΙΚΗ</a></li>
+                <li>
+                  <a class="dropdown-link" >
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "STUDENT MOBILITY" data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΦΟΙΤΗΤΩΝ </span>
+                    <i id="kinitikotitaFititon" class="fas fa-caret-down"></i></a>
+                  <ul class="dropdown" style="display: none;">
+                    <li class="dropdown-item">
+                      <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                        <span style="font-family: 'CalibriBold';" data-lang-en = "STUDIES" data-lang-el="ΣΠΟΥΔΕΣ">ΣΠΟΥΔΕΣ</span> 
+                        <i class="fas fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown inner-dropdown" style="display: none;">
+                        <li class="dropdown-item inner-dropdown-item">
+                          <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "FIELD" data-lang-el="ΠΛΑΙΣΙΟ">ΠΛΑΙΣΙΟ</a>
+                        </li>
+                        <li class="dropdown-item inner-dropdown-item">
+                          <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SELECTION PROCEDURE" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                        </li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "BEFORE MOVEMENT" data-lang-el="ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACADEMIC PRIORITIES" data-lang-el="ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "AFTER MOVEMENT" data-lang-el="ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACCOMMODATION & CARE" data-lang-el="ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "DEPARTMENT AGREEMENTS" data-lang-el="ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ">ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "LANGUAGE SUPPORT" data-lang-el="ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                        <span style="font-family: 'CalibriBold';" data-lang-en = "INTERNSHIP" data-lang-el="ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ ">ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ </span> 
+                        <i class="fas fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown inner-dropdown" style="display: none;">
+                        <li class="dropdown-item inner-dropdown-item">
+                          <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "CHOOSE PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ">ΔΙΑΔΙΚΑΣΙΑ ΕΠΙΛΟΓΗΣ</a>
+                        </li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "BEFORE MOVEMENT" data-lang-el="ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΠΡΙΝ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACADEMIC PRIORITIES" data-lang-el="ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ">ΑΚΑΔΗΜΑΙΚΕΣ ΥΠΟΧΡΕΩΣΕΙΣ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "AFTER MOVEMENT" data-lang-el="ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ">ΜΕΤΑ ΤΗΝ ΜΕΤΑΚΙΝΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "ACCOMMODATION & CARE" data-lang-el="ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ">ΔΙΑΜΟΝΗ & ΠΕΡΙΘΑΛΨΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "DEPARTMENT AGREEMENTS" data-lang-el="ΣΥΜΦΩΝΙΕΣ ΤΜΗΜΑΤΩΝ ΔΠΘ">ΕΥΠΑΘΕΙΣ ΟΜΑΔΕΣ ΦΟΙΤΗΤΩΝ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "LANGUAGE SUPPORT" data-lang-el="ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ">ΓΛΩΣΣΙΚΗ ΥΠΟΣΤΗΡΙΞΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "FIND A POSITION" data-lang-el="ΕΥΡΕΣΗ ΘΕΣΗΣ">ΕΥΡΕΣΗ ΘΕΣΗΣ</a></li>
+    
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-link">
+                      <span style="font-family: 'CalibriBold';" data-lang-en = "PERSONNEL MOBILITY " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΠΡΟΣΩΠΙΚΟΥ </span> 
+                      <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown" style="display: none;">
+                    <li class="dropdown-item">
+                      <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                        <span style="font-family: 'CalibriBold';" data-lang-en = "MOBILITY FOR TEACHING " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΔΙΔΑΣΚΑΛΙΑ </span> 
+                        <i id="kinitikotitaProsopikou" class="fas fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown inner-dropdown" style="display: none;">
+                        <li class="dropdown-item inner-dropdown-item">
+                          <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ">ΔΙΑΔΙΚΑΣΙΑ</a>
+                        </li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL WITH SPECIAL NEEDS" data-lang-el="ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;"data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="dropdown-link inner-dropdown-link" style="font-size: 15px;">
+                        <span style="font-family: 'CalibriBold';" data-lang-en = "MOBILITY FOR LEARNING " data-lang-el="ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ ">ΚΙΝΗΤΙΚΟΤΗΤΑ ΓΙΑ ΕΠΙΜΟΡΦΩΣΗ </span> 
+                        <i id="kinitikotitaEpim" class="fas fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown inner-dropdown" style="display: none;">
+                        <li class="dropdown-item inner-dropdown-item">
+                          <a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PROCESS" data-lang-el="ΔΙΑΔΙΚΑΣΙΑ">ΔΙΑΔΙΚΑΣΙΑ</a>
+                        </li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "SUBSIDY" data-lang-el="ΕΠΙΧΟΡΗΓΗΣΗ">ΕΠΙΧΟΡΗΓΗΣΗ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL WITH SPECIAL NEEDS" data-lang-el="ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ">ΠΡΟΣΩΠΙΚΟ ΜΕ ΕΙΔΙΚΕΣ ΑΝΑΓΚΕΣ</a></li>
+                        <li class="dropdown-item inner-dropdown-item"><a class="dropdown-link inner-dropdown-link" href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "PERSONNEL TRAINING" data-lang-el="ΕΠΙΜΟΡΦΩΣΗ ΠΡΟΣΩΠΙΚΟΥ">ΕΠΙΜΟΡΦΩΣΗ ΠΡΟΣΩΠΙΚΟΥ</a></li>
+                    
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-link">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "INTERNATIONAL MOBILITY " data-lang-el="ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ ">ΔΙΕΘΝΗΣ ΚΙΝΗΤΙΚΟΤΗΤΑ </span> 
+                    <i id="dieth" class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown" style="display: none;">
+                    <li class="dropdown-item">
+                      <a href="#" style="font-size: 15px;" data-lang-en = "FRAME" data-lang-el="ΠΛΑΙΣΙΟ">ΠΛΑΙΣΙΟ</a>
+                    </li>
+                    <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "MOBILITY PARTNERSHIPS" data-lang-el="ΣΥΝΕΡΓΑΣΙΕΣ ΚΙΝΗΤΙΚΟΤΗΤΑΣ">ΣΥΝΕΡΓΑΣΙΕΣ ΚΙΝΗΤΙΚΟΤΗΤΑΣ</a></li>
+                    <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-link">
+                    <span style="font-family: 'CalibriBold';" data-lang-en = "MIXED INTENSIVE PROGRAMS " data-lang-el="ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ ">ΜΙΚΤΑ ΕΝΤΑΤΙΚΑ ΠΡΟΓΡΑΜΜΑΤΑ </span> 
+                     <i id="mikta" class="fas fa-caret-down"></i>
+                    </a>
+                  <ul class="dropdown" style="display: none;">
+                    <li class="dropdown-item">
+                      <a href="#" style="font-size: 15px;" data-lang-en = "BIPs COORDINATED BY DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΝΤΟΝΙΖΕΙ ΤΟ ΔΠΘ</a>
+                    </li>
+                    <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "BIPs INVOLVING DUTH" data-lang-el="BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ">BIPs ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΤΟ ΔΠΘ</a></li>
+                    <li class="dropdown-item"><a href="#" style="font-size: 15px;" data-lang-en = "USEFUL DOCUMENTS" data-lang-el="ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ">ΧΡΗΣΙΜΑ ΕΝΤΥΠΑ</a></li>
+                  </ul>
+                </li>
+                <li><a style="" href="#" data-lang-en = "COMMUNICATION" data-lang-el="ΕΠΙΚΟΙΝΩΝΙΑ">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                
+    
+            </ul>
+            
+        </div>
+        <br>
+        <br>
+        <section id="form_section">
+            <h2>Φόρμα αίτησης</h2>
+            <div class="container">
+              <form action="/submit" method="post">
+                <label for="fname">Όνομα</label>
+                <input type="text" id="fname" name="firstname" placeholder="Το όνομά σου..">
+            
+                <label for="lname">Επώνυμο</label>
+                <input type="text" id="lname" name="lastname" placeholder="Το επώνυμό σου..">
+
+                <label for="student_email">Email</label>
+                <input type="email" id="email" name="student_email" placeholder="Το email σου..">
+            
+                <label for="teachers">Υπεύθυνος καθηγητής</label>
+                
+                  <select class="classic" id="teachersArray" name="teachers">
+                    <option value="jimdaf11@gmail.com">Καθηγητής 1</option>
+                    <option value="Καθηγητής 2">Καθηγητής 2</option>
+                    <option value="Καθηγητής 3">Καθηγητής 3</option>
+                  </select>
+                
+                
+            
+                <label for="subject">Θέμα</label>
+                <textarea id="subject" name="subject" placeholder="Περιέγραψε το θέμα σου.." style="height:200px"></textarea>
+            
+                <label for="pdf_file">Ανέβασε PDF αίτησης</label>
+                <input type="file" id="pdf_file" name="pdf_file" accept=".pdf">
+
+                <input type="submit" value="Υποβολή">
+              </form>
+            </div>
+        </section>
+        
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <script>
+            function changeLanguage(lang) {
+                localStorage.setItem('preferredLanguage', lang);
+                document.documentElement.setAttribute('lang', lang);
+                const elements = document.querySelectorAll('[data-lang-' + lang + ']');
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-lang-' + lang);
+                });
+            }
+
+            // On page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const preferredLanguage = localStorage.getItem('preferredLanguage') || 'el';
+                changeLanguage(preferredLanguage);
+            });
+          </script>
+          <script>
+            const hamburger = document.getElementById('hamburger');
+            const navList = document.getElementById('nav-list');
+            const dropdown = document.querySelectorAll('.dropdown')
+            const navigationBar = document.querySelector(".nav-bar")
+    
+            function updateNavListDisplay(){
+              if (window.matchMedia("(min-width: 1201px)").matches) {
+                  navList.style.display = "inline-flex"
+                  navList.style.transition = "all 0.5s"
+                  
+              }else if(window.matchMedia("(max-width: 1200px)").matches){
+                  navList.style.display="none"
+                  navList.style.transition = "all 0.5s"
+                  
+                  
+                  
+              }
+            }
+            
+            hamburger.addEventListener('click', () => {
+              
+              if(navList.style.display == "flex"){
+                navList.style.display = "none"
+                navigationBar.classList.toggle('close');
+                
+              }else{
+                navList.style.display = "flex"
+                navigationBar.classList.toggle('open');
+              }
+                
+            });
+    
+            // Event listener for window resize
+            window.addEventListener('resize', updateNavListDisplay);
+          </script>
+    
+          <script>
+            // For dropdown navbar items
+            const navBar = document.querySelectorAll('.nav-bar');
+            const dropdownItemLines = document.querySelectorAll('.dropdown');
+            const innerDropdownItemLines = document.querySelectorAll('.inner-dropdown');
+            const dropdownLinksAll = document.querySelectorAll('.dropdown-link');
+            const innerDropdownLinksAll = document.querySelectorAll('.inner-dropdown-link');
+    
+            dropdownLinksAll.forEach(item =>{
+              
+              item.addEventListener('click',(event) => {
+                  event.preventDefault(); // Prevent the default anchor behavior
+                  var parent_li = item.parentElement;
+                  var dropdown_ul = parent_li.querySelector('.dropdown')
+                  var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
+                  var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
+                  var icon = item.querySelector('i')
+                  dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
+                  
+                  if(dropdown_ul.style.display == 'block'){
+                    icon.classList.remove('fas', 'fa-caret-down');
+                    if(item.classList.contains('inner-dropdown-link')){
+                      icon.classList.add('fas', 'fa-caret-up');
+                      
+                    }else{
+                      icon.classList.add('fas', 'fa-caret-up');
+                    }
+                    
+                    
+                  }else{
+                    if(item.classList.contains('inner-dropdown-link')){
+                      icon.classList.remove('fas', 'fa-caret-up');
+                    }else{
+                      icon.classList.remove('fas', 'fa-caret-up');
+                    }
+                    
+                    icon.classList.add('fas', 'fa-caret-down');
+                  }
+                  dropdownItemList.forEach((i,index) => {
+                      i.style.display = i.style.display === 'block' ? 'none' : 'block';
+                      i.style.margin = "0"
+                      i.style.padding = "0"
+                      
+                      
+                  })
+                  innerDropdownItemList.forEach((i,index) =>{
+                    i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
+                    i.style.margin = '0 auto'
+                    
+                    i.style.overflow = "auto"
+                  })
+                  //event.stopPropagation(); // Prevent click event from bubbling up
+                })
+                
+    
+                /*
+                item.addEventListener('mouseenter',(event) => {
+                  event.preventDefault(); // Prevent the default anchor behavior
+                  var parent_li = item.parentElement;
+                  var dropdown_ul = parent_li.querySelector('.dropdown')
+                  var dropdownItemList = dropdown_ul.querySelectorAll('.dropdown-item')
+                  var innerDropdownItemList = dropdown_ul.querySelectorAll('.inner-dropdown-item')
+                  var icon = item.querySelector('i')
+                  dropdown_ul.style.display = dropdown_ul.style.display === 'block' ? 'none' : 'block';
+                  
+                  if(dropdown_ul.style.display == 'block'){
+                    icon.classList.remove('fas', 'fa-caret-down');
+                    if(item.classList.contains('inner-dropdown-link')){
+                      icon.classList.add('fas', 'fa-caret-up');
+                      
+                    }else{
+                      icon.classList.add('fas', 'fa-caret-up');
+                    }
+                    
+                    
+                  }else{
+                    if(item.classList.contains('inner-dropdown-link')){
+                      icon.classList.remove('fas', 'fa-caret-up');
+                    }else{
+                      icon.classList.remove('fas', 'fa-caret-up');
+                    }
+                    
+                    icon.classList.add('fas', 'fa-caret-down');
+                  }
+                  dropdownItemList.forEach((i,index) => {
+                      i.style.display = i.style.display === 'block' ? 'none' : 'block';
+                      i.style.margin = "0"
+                      i.style.padding = "0"
+                      
+                      
+                  })
+                  innerDropdownItemList.forEach((i,index) =>{
+                    i.style.display = i.style.display === 'flex' ? 'none' : 'flex';
+                    i.style.margin = '0 auto'
+                    
+                    i.style.overflow = "auto"
+                  })
+                  //event.stopPropagation(); // Prevent click event from bubbling up
+                })
+                  */
+    
+                  /*
+                item.addEventListener('mouseenter', (event) => {
+                    event.preventDefault();
+                    var parent_li = item.parentElement;
+                    var dropdown_ul = parent_li.querySelector('.dropdown');
+                    var icon = item.querySelector('i');
+    
+                    // Show the dropdown with transition
+                    dropdown_ul.classList.add('show');
+                    icon.classList.remove('fas', 'fa-caret-down');
+                    icon.classList.add('fas', 'fa-caret-up');
+    
+                    // Optional: Show dropdown items
+                    dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
+                        i.style.display = 'block';
+                    });
+                });
+    
+                item.addEventListener('mouseleave', (event) => {
+                    event.preventDefault();
+                    var parent_li = item.parentElement;
+                    var dropdown_ul = parent_li.querySelector('.dropdown');
+                    var icon = item.querySelector('i');
+    
+                    // Hide the dropdown with transition
+                    dropdown_ul.classList.remove('show');
+                    icon.classList.remove('fas', 'fa-caret-up');
+                    icon.classList.add('fas', 'fa-caret-down');
+    
+                    // Optional: Hide dropdown items
+                    dropdown_ul.querySelectorAll('.dropdown-item').forEach((i) => {
+                        i.style.display = 'none';
+                    });
+                });
+                */
+            })
+            
+    
+            
+            /*navBar.forEach(item => {
+                var dropdown = item.querySelector('.dropdown')
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                var dropdownLinks = item.querySelector('.dropdown-link')
+                var dropdownItemList = item.querySelectorAll('.dropdown-item')
+                dropdownLink.addEventListener('click',(event) => {
+                  dropdownItemList.forEach((i,index) => {
+                      i.style.display = i.style.display === 'block' ? 'none' : 'block';
+                      i.style.margin = "0"
+                      i.style.padding = "0"
+                      
+                      
+                  })
+                  //event.stopPropagation(); // Prevent click event from bubbling up
+                })
+                
+            });
+            */
+        /*if(index != dropdownItems.length-1){
+                        i.style.marginBottom = "5px"
+                      }*/
+    
+            
+    
+            // Close dropdown when clicking outside
+            /*window.addEventListener('click', () => {
+                dropdownItemLines.forEach(item => {
+                    const dropdown = item.querySelector('.dropdown');
+                    if (dropdown) {
+                        dropdown.style.display = 'none'; // Close any open dropdowns
+                    }
+                    item.style.display = 'none';
+                });
+            });*/
+    
+          </script>
+          <script>
+            function isValidEmail(email) {
+                // Regular expression for basic email validation
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+            const form = document.getElementById("form_section");
+
+form.addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    
+    const formData = new FormData();
+    const firstnameInput = document.getElementById('fname')
+    const lastnameInput = document.getElementById('lname')
+    const emailInput = document.getElementById('email')
+    const teachers = document.getElementById('teachersArray')
+    const selectedTeacher = teachers.value;
+    const subjectInput = document.getElementById('subject')
+
+    // Retrieve the values
+    const firstname = firstnameInput.value; // Gets the value of the firstname input
+    const lastname = lastnameInput.value; // Gets the value of the lastname input
+    const email = emailInput.value; // Gets the value of the email input
+    const subject = subjectInput.value;
+
+    const pdf_file = document.getElementById('pdf_file')
+    const file = pdf_file.files[0];
+    if (!firstname || !lastname || !email || !file || !selectedTeacher) {
+        alert('Please fill in all fields.'); // Show an alert for empty fields
+        return; // Stop further execution
+    }
+    // Validate email format
+    if (!isValidEmail(email)) {
+        alert('Please enter a valid email address.'); // Show alert for invalid email
+        return; // Stop further execution
+    }
+    const maxSizeInMB = 10
+    const maxSizeInBytes = maxSizeInMB * 1024 * 1024; // Convert to bytes
+    // Check if a file is selected
+    if (file) {
+        // Check the file size
+        if (file.size > maxSizeInBytes) {
+            document.getElementById('error-message').textContent = `Το αρχείο ξεπερνά το όριο των ${maxSizeInMB} MegaBytes που μπορεί να δεχθεί το σύστημα.`;
+            return; // Stop the form submission
+        } else {
+            document.getElementById('error-message').textContent = ''; // Clear any previous error messages
+        }
+    }
+    formData.append('firstname',firstname)
+    formData.append('lastname',lastname)
+    formData.append('email',email)
+    formData.append('subject',subject)
+    formData.append('teachers',selectedTeacher)
+    formData.append('pdf_file',pdf_file.files[0])
+    fetch("http://localhost:3000/submit", {
+        method: 'POST',
+        body: formData
+    })
+        .then((res) => console.log(res))
+        .catch((err) => console.log("Error occured", err));
+}
+          </script>
+</body>
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/duth.gr/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://gr.linkedin.com/school/duth-/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/duthgr/?hl=en">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Phone to communicate: 25310 39000" data-lang-el="Τηλέφωνο επικοινωνίας: 25310 39000">Τηλέφωνο επικοινωνίας: 25310 39000</a></li>
+      <li class="menu__item"><a class="menu__link" href="#" data-lang-en = "Panepistimioupoli, 
+        Komotini" data-lang-el="Πανεπιστημιούπολη, 
+        69100 Κομοτηνή">
+        Πανεπιστημιούπολη, 
+        69100 Κομοτηνή</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">protocol@duth.gr</a></li>
+
+    </ul>
+    <p>&copy;2024 Dimitrios Dafnis | All Rights Reserved</p>
+  </footer>
+</html>

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Democritus_University_of_Thrace_New_Logo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         
                a:hover{
@@ -85,7 +87,37 @@
         top: 140px;       
     }
 }
-       
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  grid-gap: 20px;
+  
+}
+
+.grid article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.grid article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+@media all and (max-width: 1100px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 20px;
+    
+  }
+}
+
        
     </style>
 </head>
@@ -514,23 +546,93 @@
       </div>
         <br>
         <br>
-        <section >
-            <h2>Στοιχεία επικοινωνίας</h2>
-            <br>
-            <span style="font-size: 18px;">Τηλέφωνο τεχνικού προσωπικού &rarr; 6997057274 </span> 
-            <br><br>
-            <span style="font-size: 18px;">Τηλέφωνο γραμματείας &rarr; 2541074547</span>   
-            <br><br>
-            <span style="font-size: 18px;">Τηλέφωνο επικοινωνίας 3 &rarr; 25410...</span>   
-            <br><br>
-            <span style="font-size: 18px;">Διεύθυνση email τεχνικού προσωπικού &rarr; protocol@duth.gr</span>  
-            <br><br>
-            <span style="font-size: 18px;">Διεύθυνση email γραμματείας &rarr; jimdaf11@gmail.com</span> 
-            <br><br>
-            <span style="font-size: 18px;">Διεύθυνση email 3 &rarr; sgavaki@modip.duth.gr</span> 
+        <section style="background-color: transparent; background: transparent; box-shadow: none;">
+          <h2 style="color: #fff; font-family: 'CalibriBold';">Γραφείο Erasmus+ Κομοτηνή</h2>
+          <div class="container">
             
-
-            </p>
+            <main class="grid">
+              
+              <article>
+                <img style="height: 250px; width: 250px;" src="images/[freepicdownloader.com]-customer-service-woman-with-long-hair-sitting-table-with-laptop-with-headphones-microphone-normal.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Υπεύθυνη γραφείου Erasmus+</h3>
+                    <br>
+                    <p>Ελένη Μαυρίδου</p>
+                    <p>Τηλέφωνο</p>
+                    <p style="text-decoration: underline;">emavr@duth.gmail.com</p>
+                    
+                  </div>
+                
+                
+              </article>
+              <article>
+                <img style="height: 250px; width: 250px;" src="images/5114865.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Υπεύθυνη για οικονομικά θέματα</h3>
+                    <br>
+                    <p>Άννα Αγραπετίδου</p>
+                    <p>2531039103</p>
+                    <p style="text-decoration: underline;">aagrapet@econ.duth.gr</p>
+                    
+                  </div>
+                
+                
+              </article>
+              <article>
+                <img style="height: 250px; width: 280px;" src="images/[freepicdownloader.com]-woman-working-received-phone-vector-flat-style-illustration-design-normal.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Κινητικότητα Προσωπικού / Μικτά Εντατικά Προγράμματα (BIP)</h3>
+                    <br>
+                    <p>Ευγενία Θεοχαρίδου</p>
+                    <p>2531039102</p>
+                    <p style="text-decoration: underline;">theochae@affil.duth.gr</p>
+                    
+                  </div>
+                
+                
+              </article>
+              <article>
+                <img style="height: 250px; width: 250px;" src="images/5132732.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Διεθνής Κινητικότητα (ICM)</h3>
+                    <br>
+                    <p>Αθανασία Μπρατίκα</p>
+                    <p>2531039085</p>
+                    <p style="text-decoration: underline;">abratika@affil.duth.gr</p>
+                    
+                  </div>
+                
+                
+              </article>
+              <article>
+                <img style="height: 250px; width: 250px;" src="images/5138237.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Υπεύθυνη για τους εξερχόμενους φοιτητές </h3>
+                    <br>
+                    <p>Χαρά Τριάντη</p>
+                    <p>2531039104</p>
+                    <p style="text-decoration: underline;">ctrianti@affil.duth.gr</p>
+                    
+                  </div>
+                
+                
+              </article>
+              <article>
+                <img style="height: 250px; width: 250px;" src="images/5129118.jpg" alt="Sample photo">
+                  <div class="text" style="text-align: left;">
+                    <h3>Υπεύθυνη για τους εξερχόμενους φοιτητές </h3>
+                    <br>
+                    <p>Ευγενία Γεωργαντζή</p>
+                    <p>2531039086</p>
+                    <p style="text-decoration: underline;">evgeorga@affil.duth.gr</p>
+                    
+                  </div>
+                
+                
+              </article>
+            </main>
+          </div>
+            
         </section>
         
         

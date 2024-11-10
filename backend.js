@@ -48,8 +48,8 @@ app.post('/submit',upload.single('pdf_file'), (req, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL, // Replace with your email 'jimdaf11@gmail.com'
-            pass: process.env.PASSWORD // Replace with your email password 'effh sqye inav xyxd'
+            user: EMAIL, // Replace with your email 'jimdaf11@gmail.com'
+            pass: PASSWORD // Replace with your email password 'effh sqye inav xyxd'
         }
     });
 

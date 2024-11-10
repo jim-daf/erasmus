@@ -115,7 +115,8 @@ input[type=submit]:hover {
     0 8px 30px rgba(0, 0, 0, 0.1);  /* Secondary shadow for depth */
 } 
 #form_section{
-  width: max-content;
+  max-width: 90%;
+  width: 80%;
   margin: auto;
   
   padding: 20px 25px 1px 25px;
@@ -666,10 +667,10 @@ function submitForm(e) {
     if (file) {
         // Check the file size
         if (file.size > maxSizeInBytes) {
-            document.getElementById('error-message').textContent = `Το αρχείο ξεπερνά το όριο των ${maxSizeInMB} MegaBytes που μπορεί να δεχθεί το σύστημα.`;
+            alert(`Το αρχείο ξεπερνά το όριο των ${maxSizeInMB} MegaBytes που μπορεί να δεχθεί το σύστημα.`);
             return; // Stop the form submission
         } else {
-            document.getElementById('error-message').textContent = ''; // Clear any previous error messages
+            // Clear any previous error messages
         }
     }
     formData.append('firstname',firstname)

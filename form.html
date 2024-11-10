@@ -679,7 +679,7 @@ function submitForm(e) {
     formData.append('subject',subject)
     formData.append('teachers',selectedTeacher)
     formData.append('pdf_file',pdf_file.files[0])
-    fetch("http://localhost:3000/submit", {
+    fetch("https://erasmus.onrender.com/submit", {
         method: 'POST',
         body: formData
     })

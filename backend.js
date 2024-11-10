@@ -6,8 +6,8 @@ const multer = require('multer');
 const fs = require('fs'); // Require the fs module
 require('dotenv').config();
 
-const EMAIL = process.env.EMAIL;
-const PASSWORD = process.env.PASSWORD;
+const EMAIL = 'erasmusplusduth@gmail.com';
+const PASSWORD = 'snbm ntoa wxuf cypi';
 
 const app = express();
 const PORT = process.env.PORT || 3000;

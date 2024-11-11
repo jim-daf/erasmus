@@ -72,7 +72,7 @@ app.post('/submit',upload.single('pdf_file'), (req, res) => {
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(`Error: ${error}`);
+            return res.status(500).send('Error message not sent'); // Optional: Send an error response
 
         }
         console.log(`Message Sent successfully!! : ${info.response}`);

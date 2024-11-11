@@ -679,12 +679,36 @@ function submitForm(e) {
     formData.append('subject',subject)
     formData.append('teachers',selectedTeacher)
     formData.append('pdf_file',pdf_file.files[0])
-    fetch("https://erasmus.onrender.com/submit", {
+    fetch("/submit", {
         method: 'POST',
         body: formData
     })
-        .then((res) => console.log(res))
-        .catch((err) => console.log("Error occured", err));
+        .then((res) => {
+          if(!res.ok){
+            return Promise.reject('Network response was not ok')
+          }else{
+            return res.text();
+          }
+        })
+        .then(data =>{
+            console.log(data)
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Η υποβολή της φόρμας ολοκληρώθηκε επιτυχώς",
+              showConfirmButton: false,
+              timer: 1500
+            });
+        })
+        .catch(err => {
+            console.log("Error occurred", err);
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Κάτι πήγε στραβά!",
+                showConfirmButton: true
+            });
+        });
 }
           </script>
 </body>

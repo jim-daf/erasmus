@@ -1270,6 +1270,10 @@ window.addEventListener('resize', function () {
         const elements = document.querySelectorAll('[data-lang-' + lang + ']');
         elements.forEach(el => {
             el.textContent = el.getAttribute('data-lang-' + lang);
+            // Apply wave effect if it's a title
+            if (el.classList.contains('title')) {
+                applyWaveEffect(el);
+            }
         });
     }
 
@@ -1438,8 +1442,33 @@ window.addEventListener('resize', function () {
         body.style.background = "#7b1511"
       }
     </script>
-    
-    
+    <script>
+      function applyWaveEffect(titleElement) {
+          const text = titleElement.textContent.trim();
+          titleElement.innerHTML = ''; // Clear the original text
+  
+          // Wrap each letter and spaces in a span and set the animation delay
+          for (let i = 0; i < text.length; i++) {
+              const span = document.createElement('span');
+              span.textContent = text[i];
+  
+              // Check if the character is a space
+              if (text[i] === ' ') {
+                  span.style.display = 'inline'; // Keep spaces inline
+              } else {
+                  span.style.animationDelay = `${i * 0.1}s`; // Set delay for each letter
+                  span.style.display = 'inline-block'; // Ensure letters are blocks for animation
+              }
+              
+              titleElement.appendChild(span);
+          }
+      }
+  
+      document.addEventListener("DOMContentLoaded", function() {
+          // Apply wave effect to all titles on load
+          document.querySelectorAll('.title').forEach(applyWaveEffect);
+      });
+    </script>
   
   
 

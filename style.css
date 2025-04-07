@@ -150,7 +150,7 @@
     opacity: 1;
 }
 @media(prefers-reduced-motion: no-preference){
-    section,.container{
+    section, .container{
         scale: .8; opacity: 0;
         animation: fade-in linear forwards;
         animation-timeline: view();
@@ -281,6 +281,10 @@ body{
     background-position: center;
     height: 100vh;
     min-height: 100px;
+    
+    
+    
+    
     
     
     
@@ -579,9 +583,38 @@ img {
     width: fit-content;
     margin: auto;
     margin-bottom: 10px;
+    font-weight: normal;
     
     
   }
+  .swiper-slide .title span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+}
+
+
+
+
+/* Continue this pattern for more letters */
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 
   .swiper-slide .subtitle {
     font-size: 21px;

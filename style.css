@@ -150,7 +150,7 @@
     opacity: 1;
 }
 @media(prefers-reduced-motion: no-preference){
-    section{
+    section,.container{
         scale: .8; opacity: 0;
         animation: fade-in linear forwards;
         animation-timeline: view();

@@ -149,6 +149,34 @@
     
     opacity: 1;
 }
+@media(prefers-reduced-motion: no-preference){
+    section{
+        scale: .8; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+    }
+    @keyframes fade-in {
+        to{scale: 1; opacity: 1;}
+    }
+
+    /*
+    section {
+        transform: translateX(100%); 
+        opacity: 0;
+        animation: slide-in 1.5s ease-in-out forwards; 
+        animation-timeline: view();
+        animation-range: entry;
+    }
+
+    @keyframes slide-in {
+        to {
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }*/
+}
+
 /*
 .sidebar ul li .tooltip{
     position: absolute;
@@ -253,6 +281,7 @@ body{
     background-position: center;
     height: 100vh;
     min-height: 100px;
+    
     
     
     
